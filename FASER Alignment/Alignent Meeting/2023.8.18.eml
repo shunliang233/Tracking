@@ -1,0 +1,193 @@
+Received: from ZR1P278MB1059.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:59::10)
+ by ZR2P278MB1132.CHEP278.PROD.OUTLOOK.COM with HTTPS; Fri, 18 Aug 2023
+ 08:13:28 +0000
+Received: from DU2PR04CA0201.eurprd04.prod.outlook.com (2603:10a6:10:28d::26)
+ by ZR1P278MB1059.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:59::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6699.20; Fri, 18 Aug
+ 2023 08:13:26 +0000
+Received: from DB5EUR02FT063.eop-EUR02.prod.protection.outlook.com
+ (2603:10a6:10:28d:cafe::78) by DU2PR04CA0201.outlook.office365.com
+ (2603:10a6:10:28d::26) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6699.20 via Frontend
+ Transport; Fri, 18 Aug 2023 08:13:26 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.218.51)
+ smtp.mailfrom=gmail.com; dkim=none (message not signed)
+ header.d=none;dmarc=fail action=none header.from=cern.ch;compauth=pass
+ reason=704
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.218.51 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.218.51; helo=mail-ej1-f51.google.com; pr=C
+Received: from mail-ej1-f51.google.com (209.85.218.51) by
+ DB5EUR02FT063.mail.protection.outlook.com (10.13.59.50) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6699.14 via Frontend Transport; Fri, 18 Aug 2023 08:13:26 +0000
+Received: by mail-ej1-f51.google.com with SMTP id a640c23a62f3a-99c136ee106so76551766b.1;
+        Fri, 18 Aug 2023 01:13:26 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1692346405; x=1692951205;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=Y4h8X1KuaFXseVMcF66Cj+5/G3FoErsEkjhimdEBGgM=;
+        b=Y/WyT3EHCmkoCSIjsVbRZmFUgZot8OMPbYG9PhazBK/JWNMr21DY3kOMnd/z8PiYpS
+         o7Pu3CSnn/hUC8llp0Y9RkPid8sxj6u4YsRgCqJolQpkN6s3TyUjy2yJWu3oWFyPaytT
+         /r+S5XHIObGnftk/LPeMdI2wEw1Zv4RFFDwBsSaCnlONSCkCVhPrVGMCS3+w2Y/pefir
+         a5o+a5qm19kOoeti6h4iJvc5f3x8/aHyLBwmYB9nNipifXe9hMKOyOkarHqQsaIkDVMt
+         boCFqn96BnHhWGfJFXtVC2ilENApt7EDhcA09TlTVdQfMvDPZbnKM9kXCRsHuImSlS4e
+         tUmw==
+X-Gm-Message-State: AOJu0YygR8HiCuota+XvMn5nPrSxpKG28XaV2lZz/pdvbyTl9umOC6ok
+	nPmCiXgsIQ318Sohxkd2kpKja1pR3ddohrNiJuJZb83n8Ko=
+X-Google-Smtp-Source: AGHT+IFX4VH5yWUgrIXqVSbgsZQKd0VlE3kmPKYkl0zPKgaSTKH9wJZaLA9T2aB4IbqX/Am46MM6kH6XSqpQZKJ7P70=
+X-Received: by 2002:a17:906:3191:b0:992:9005:5ed5 with SMTP id
+ 17-20020a170906319100b0099290055ed5mr1570933ejy.32.1692346404912; Fri, 18 Aug
+ 2023 01:13:24 -0700 (PDT)
+References: <GVAP278MB0312BBFF1F82FFD7339765C5E01AA@GVAP278MB0312.CHEP278.PROD.OUTLOOK.COM>
+In-Reply-To: <GVAP278MB0312BBFF1F82FFD7339765C5E01AA@GVAP278MB0312.CHEP278.PROD.OUTLOOK.COM>
+From: Hidetoshi Otono <Hidetoshi.Otono@cern.ch>
+Date: Fri, 18 Aug 2023 10:13:08 +0200
+Message-ID: <CAB2THhDigHh-kRZTRE6taxU+4TQWejhD_5C4j6c_RftRRN7OAQ@mail.gmail.com>
+Subject: Re: informal meeting for tracker alignment and emulsion-IFT matching
+ (Aug. 18, 3PM)
+To: FASER-tracker <FASER-tracker@cern.ch>, FASER-neutrino@cern.ch
+Content-Type: multipart/alternative; boundary="0000000000004d427106032e1ac2"
+Return-Path: hi.otono@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 18 Aug 2023 08:13:26.0849
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 212cfde5-2b08-42ba-cbb9-08db9fc2ff6c
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: c80d3499-4a40-4a8c-986e-abce017d6b19:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DB5EUR02FT063:EE_|ZR1P278MB1059:EE_|ZR2P278MB1132:EE_
+X-MS-Exchange-Organization-AuthSource:
+ DB5EUR02FT063.eop-EUR02.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 212cfde5-2b08-42ba-cbb9-08db9fc2ff6c
+X-LD-Processed: c80d3499-4a40-4a8c-986e-abce017d6b19,ExtAddr,ExtFwd
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:209.85.218.51;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-ej1-f51.google.com;PTR:mail-ej1-f51.google.com;CAT:NONE;SFS:(13230031)(4636009)(451199024)(55446002)(356005)(7596003)(7636003)(966005)(5660300002)(42186006)(6666004)(6636002)(33964004)(1096003)(450100002)(8676002)(53546011)(9686003)(26005)(75640400001)(4006050)(83170400001)(166002)(42882007)(336012)(7406005)(7366002)(7416002);DIR:INB;
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 18 Aug 2023 08:13:26.0692
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 212cfde5-2b08-42ba-cbb9-08db9fc2ff6c
+X-MS-Exchange-CrossTenant-Id: c80d3499-4a40-4a8c-986e-abce017d6b19
+X-MS-Exchange-CrossTenant-AuthSource: DB5EUR02FT063.eop-EUR02.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: ZR1P278MB1059
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.6617239
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6699.018
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?cUR1eU5ISCtzMklSTTBKWDArV0JDSkx5UjVvNnFyRmU0L2hDeTBnZndOUlFo?=
+ =?utf-8?B?dm5YMDlReC9MMGFKYjVTRjdSREtzVXI3YVQ3K0dHYzFsaHFXaDAybWhTNmpv?=
+ =?utf-8?B?bGdiVTZSbTlFZWVWdklscGNaVzFVSlJRVFlaWDB1b0NPOUVsQ08ra0lRTlRV?=
+ =?utf-8?B?SktydiswL2hNbU5GMlNUMWhZc2toaFpCSnZWSG9uT3Ewa1NtUU8vVkM4QTZI?=
+ =?utf-8?B?Q1dJMm0wVzg0U2VNYXhNZ3g0OXE1bmlEeVpKa0VFTUxCSjVhV3FWWjdPdFpP?=
+ =?utf-8?B?dVgzNXVSL3RXZVRmUXBIQTRXZkNoU1JOL0dtV3BKa2s2dWRFVGlsbzNqQ1Vs?=
+ =?utf-8?B?M3dOSlRrZFE0VHZXN2hTWlcvM2k2WllXZExmenlXRnNrK2IyWitYU0hKdU9r?=
+ =?utf-8?B?Qi83RVRHSFh0MnpQalllV0pWclFqVUNvVDVEeS8yd0RUcTUzVU9CUjYwMXlJ?=
+ =?utf-8?B?ZTF2WXZ5eVNiRWtDZDhYY0RTQzdLKzEwWlV2aktwQzVvVHgxNUtiUTdiRHV5?=
+ =?utf-8?B?SS9rSkY0eEw0OGJDWU51TFQwU2o0MjBYRGFNNXFaelR5cFlZNmJnbllUZTRl?=
+ =?utf-8?B?RzNBNjJNaXdVbHBFazN1RzhTeTBiaElkQ25HcU9DdVN5ZnZ1Q1ZaTmxMRnZS?=
+ =?utf-8?B?QXVTU29WRnptcHBXcmVlbXNDSnhDeEJCbmEyaHZoV3pNK3JMQ1dWdEFkNUZ6?=
+ =?utf-8?B?eklxVkVGTkFKbm9XWEZaKy9jeXBxRTNtNUxzSzNnRXh1OXNNUXA3YUFLMlpD?=
+ =?utf-8?B?NmV4VUw1djhlT3hURk5oYXQ2UCtSTVFrbmVXSkYrckJpYlVLQThJR0dldHcy?=
+ =?utf-8?B?aUp3NEtMWUtmZlJCV3RMSSttYVlmUE55dXRHNlY5MW9UcXlyaHpEMUNDVUln?=
+ =?utf-8?B?S1Q4OUxpVkFDYU0rYklrN0VpQ2oyQ2tYYW5kdllHeXZValRub0R4eUF4Qys5?=
+ =?utf-8?B?QW1LZC9ZTUk3VlBnSFlCRFFaNW4yS1R0SE1BVWtXM0FVa2M1YVM5SDZCU0hJ?=
+ =?utf-8?B?dS9ia0R5d3hwYTFwZXIxZ2p0cnl0Wis3TzdBQnVaNEJrOWlTUjcxOXp1S2gz?=
+ =?utf-8?B?aWxSb1V3ajFLNzNrako5RzlFTHpsTjVOYXRxWXRGNjJUeUZwNXpPd3kwc2kr?=
+ =?utf-8?B?WUVVNDR3Sk5GNEpMaWRUZE8rRkU3dndLd1lrWUo4U0daRzZjbldqTEQ3U2Fz?=
+ =?utf-8?B?R2NqeGxLK0VSN2FzaE10T1orMlVYVDFKYzJlNUhIak9RcXNjYWZ5VkZNbmFH?=
+ =?utf-8?B?QlF5aHpBN3p6RVlZRXRCWFd5SmMwcEsyWVdWUHhLZGo0dE5LT3NJS2NRYU5R?=
+ =?utf-8?B?RUtVbEc3MHdsbkpodjBYYis1Ukh2UTdrSVdUak1uTUxmcFEycDkrWHhHNkpE?=
+ =?utf-8?B?NjV5VURhVDlUUktmTldWc2d5UThQL3k3cXUvNmFMbDhmMXhzeDM5Rm5TcXZp?=
+ =?utf-8?B?WDJ1V2VlTTJLVFVzOHFYTlV4VTZhV1d0NFJ4cXN1Y2dWbW91b2ZUODl2QW1C?=
+ =?utf-8?B?TldCRHRRZSt2ajMzOHdUNE9HY2psUVFWc2h0b3RuQkxPcFErTXZNSTVOS0J0?=
+ =?utf-8?B?SjF2dz09?=
+MIME-Version: 1.0
+
+--0000000000004d427106032e1ac2
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Please join if you are available:
+https://indico.cern.ch/event/1313739/
+
+Cheers, Hide
+
+On Thu, Aug 17, 2023 at 3:52=E2=80=AFPM Ke Li <ke.li@cern.ch> wrote:
+
+> Hi all,
+>
+>
+>
+> We will have our informal meeting for alignment and emulsion-ift matching
+> at tomorrow, 3pm, here is the agenda:
+>
+> https://indico.cern.ch/event/1313739/
+>
+> I=E2=80=99m booking the regular room at 42/R-016 and will let you know if=
+ it is
+> not available. We can discuss the status and progress for each task.
+>
+>
+>
+> Best,
+>
+> Tomo & Ke
+>
+>
+>
+
+--0000000000004d427106032e1ac2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div>Please join if you are available:<br></div><div><a href=
+=3D"https://indico.cern.ch/event/1313739/" target=3D"_blank">https://indico=
+.cern.ch/event/1313739/</a><br><div><br></div><div>Cheers, Hide</div></div>=
+</div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">=
+On Thu, Aug 17, 2023 at 3:52=E2=80=AFPM Ke Li &lt;<a href=3D"mailto:ke.li@c=
+ern.ch" target=3D"_blank">ke.li@cern.ch</a>&gt; wrote:<br></div><blockquote=
+ class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left-width:=
+1px;border-left-style:solid;border-left-color:rgb(204,204,204);padding-left=
+:1ex"><div>
+
+
+
+
+
+<div lang=3D"EN-US" style=3D"word-wrap:break-word">
+<div>
+<p class=3D"MsoNormal">Hi all,<u></u><u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal">We will have our informal meeting for alignment and =
+emulsion-ift matching at tomorrow, 3pm, here is the agenda:
+<u></u><u></u></p>
+<p class=3D"MsoNormal"><a href=3D"https://indico.cern.ch/event/1313739/" ta=
+rget=3D"_blank">https://indico.cern.ch/event/1313739/</a><u></u><u></u></p>
+<p class=3D"MsoNormal">I=E2=80=99m booking the regular room at 42/R-016 and=
+ will let you know if it is not available. We can discuss the status and pr=
+ogress for each task.<u></u><u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal">Best,<u></u><u></u></p>
+<p class=3D"MsoNormal">Tomo &amp; Ke<u></u><u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</div>
+</div>
+
+</div></blockquote></div>
+
+--0000000000004d427106032e1ac2--

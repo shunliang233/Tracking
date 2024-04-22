@@ -1,0 +1,668 @@
+Received: from GV0P278MB0161.CHEP278.PROD.OUTLOOK.COM (2603:10a6:710:2e::6) by
+ ZR2P278MB1132.CHEP278.PROD.OUTLOOK.COM with HTTPS; Mon, 3 Jul 2023 13:26:51
+ +0000
+Received: from AM6PR0202CA0046.eurprd02.prod.outlook.com
+ (2603:10a6:20b:3a::23) by GV0P278MB0161.CHEP278.PROD.OUTLOOK.COM
+ (2603:10a6:710:2e::6) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6565.13; Mon, 3 Jul
+ 2023 13:26:49 +0000
+Received: from VI1EUR02FT034.eop-EUR02.prod.protection.outlook.com
+ (2603:10a6:20b:3a:cafe::41) by AM6PR0202CA0046.outlook.office365.com
+ (2603:10a6:20b:3a::23) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6544.26 via Frontend
+ Transport; Mon, 3 Jul 2023 13:26:48 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.208.173)
+ smtp.mailfrom=gmail.com; dkim=none (message not signed)
+ header.d=none;dmarc=fail action=none header.from=cern.ch;compauth=pass
+ reason=704
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.208.173 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.208.173; helo=mail-lj1-f173.google.com; pr=C
+Received: from mail-lj1-f173.google.com (209.85.208.173) by
+ VI1EUR02FT034.mail.protection.outlook.com (10.13.61.55) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6565.17 via Frontend Transport; Mon, 3 Jul 2023 13:26:48 +0000
+Received: by mail-lj1-f173.google.com with SMTP id 38308e7fff4ca-2b6a1245542so73650171fa.1;
+        Mon, 03 Jul 2023 06:26:48 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1688390808; x=1690982808;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=biGde7NdmrkLzQ1qZU1ePIDiLn0rbhzR53gJrOBUSnM=;
+        b=cn/oFRf6UPGG1TT9pYCj/OXXrKFkNj5nlBo8EUpSmP3tXlbMtuhOcOlNUVyyecPkxs
+         5Cvxe51awDzgNp+8Jj6EybJ7B9r6BvGYEKPKWxwDZ0I1vZt+sJ4qH8ARMFp8fexcgv5a
+         9dcmFVMyWlH1xmh5fpWheSM3OsA3oj6G5KetCshkyKUWIJskwYGvEebBABFZnzl3zjRR
+         uADOXVWOQ8+Ej7TSNs3RV6sQWYxE1SX72VfOl3s15oO9pB/1B0fFRsxdBjdvqV3Dj6lT
+         fihO9NLD9xShlBkthhAmohkZt1ImJ2XKzQDKeVPhMdf3D9IXsH5XRqS5W8yEoG1KJQ07
+         GrVw==
+X-Gm-Message-State: ABy/qLaB7QexMj/pCxjIoRmimzUOrzCbyyFqqfEG4ffGQrXhQLi62jnh
+	IHXBxC/ALgqdapTUt33MTc+zSXXdjA4R1WW6paeZ3kedPVfj2w==
+X-Google-Smtp-Source: APBJJlFmNbitc8TSD2qZHnEN23QuMMdhR4htQTgnFWcXr+vODfrPGeCVB6SfL3N6FQ8f3nBnW3D+TPSLD5bxj+veyZU=
+X-Received: by 2002:a2e:8686:0:b0:2b6:da1e:d063 with SMTP id
+ l6-20020a2e8686000000b002b6da1ed063mr4417503lji.45.1688390807162; Mon, 03 Jul
+ 2023 06:26:47 -0700 (PDT)
+References: <GVAP278MB0312E91A30462872431B09B2E025A@GVAP278MB0312.CHEP278.PROD.OUTLOOK.COM>
+ <GVAP278MB03123DD056AB9ECEF32F913CE02AA@GVAP278MB0312.CHEP278.PROD.OUTLOOK.COM>
+ <GVAP278MB03122DEE6798079B908A02C5E029A@GVAP278MB0312.CHEP278.PROD.OUTLOOK.COM>
+In-Reply-To: <GVAP278MB03122DEE6798079B908A02C5E029A@GVAP278MB0312.CHEP278.PROD.OUTLOOK.COM>
+From: Hidetoshi Otono <Hidetoshi.Otono@cern.ch>
+Date: Mon, 3 Jul 2023 15:26:30 +0200
+Message-ID: <CAB2THhBH1sMKpZwUqMDY6gBn5yQzDuWrqUwyeq9D-T5BvkLHsA@mail.gmail.com>
+Subject: Re: Tracker alignment and Emulsion-IFT alignment
+To: Ke Li <ke.li@cern.ch>
+Cc: Zhen Hu <zhenhu@tsinghua.edu.cn>, Xin Chen <Xin.Chen@cern.ch>, 
+	Tomohiro Inada <tomohiro.inada@cern.ch>, Tobias Bockh <tobias.boeckh@cern.ch>, 
+	Ali Garabaglu <agarabag@uw.edu>, Yuxiao Wang <yuxiao.wang@cern.ch>, 
+	Samuel Zahorec <samuel.zahorec@cern.ch>, Shunliang Zhang <shunliang.zhang@cern.ch>
+Content-Type: multipart/alternative; boundary="0000000000004d94b505ff951e19"
+Return-Path: hi.otono@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 03 Jul 2023 13:26:48.8437
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 9a5fc291-963c-4e9c-9aee-08db7bc927bd
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: c80d3499-4a40-4a8c-986e-abce017d6b19:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ VI1EUR02FT034:EE_|GV0P278MB0161:EE_|ZR2P278MB1132:EE_
+X-MS-Exchange-Organization-AuthSource:
+ VI1EUR02FT034.eop-EUR02.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 9a5fc291-963c-4e9c-9aee-08db7bc927bd
+X-LD-Processed: c80d3499-4a40-4a8c-986e-abce017d6b19,ExtAddr,ExtFwd
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:209.85.208.173;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-lj1-f173.google.com;PTR:mail-lj1-f173.google.com;CAT:NONE;SFS:(13230028)(4636009)(451199021)(26005)(9686003)(6666004)(966005)(55446002)(42882007)(83170400001)(7636003)(54906003)(4326008)(6636002)(83380400001)(336012)(356005)(42186006)(7596003)(450100002)(166002)(53546011)(33964004)(5660300002)(75640400001)(6862004)(1096003)(8676002)(4006050);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 03 Jul 2023 13:26:48.8281
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 9a5fc291-963c-4e9c-9aee-08db7bc927bd
+X-MS-Exchange-CrossTenant-Id: c80d3499-4a40-4a8c-986e-abce017d6b19
+X-MS-Exchange-CrossTenant-AuthSource: VI1EUR02FT034.eop-EUR02.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: GV0P278MB0161
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.4581356
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6565.009
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?VjBFYVVHaENOanp6MGZpdndwelVDMGp6aStCYXQyT0FlZHhrbE1WM0lMakd0?=
+ =?utf-8?B?UW1LY1dudW1OUnFwRDJWU2MwOXFOY0hldllLYnhYNjE5K3lhWW1tTnBwUWVx?=
+ =?utf-8?B?Y3lFWnY0aEpZVUtMUDFzM0pEUlNlUFNVdzYrR1Y3YnArK3RDS05JdXRPZml4?=
+ =?utf-8?B?NS9JTkNLNVJCWi8rYm1qQ3dCb1NRN0dLellOL2FKdG5VcnorWTU5Y2xXK1JE?=
+ =?utf-8?B?YThIYXEybm9palMrdDBiWlFnMmtUK2h4TmdPUVgvTENkUFZyMXY0amxVSS9R?=
+ =?utf-8?B?T0NUZlBVUStKeGhGdXYxWjJhUlJ2d3ZNeStJcDREcjhoTzg1OXB2TzZ1eU9H?=
+ =?utf-8?B?YUVJa0NKc1pqbk1MNzhsajJTUGpDbm1iZHlLTTBucFFzVkpKLzVQaTlVNmVV?=
+ =?utf-8?B?VTROZ1hMWWozaWtHdURZeXJhTVo2R2dOeGdDSm01UFc0elZ4SDNWd01QY2F5?=
+ =?utf-8?B?akhVRTNjM1Z3OEVKNXVRa1R2a0cvYW1jMEhESHpTSENuaVRuS3QzMWZzQVNI?=
+ =?utf-8?B?bUtNQVlvUlVWZUtQSnAxNHJZWENzOU5BZWpPR05OR0pxdVR1dW5nNDN3eHo5?=
+ =?utf-8?B?MENpbnM2SzBGaHZwR25MR3RYdHIyU0xUOFpUN2dNcWhpT3B5K2E0OHNBNzht?=
+ =?utf-8?B?N2lUMjh0UGRBU1dDemY5M0prTkhsOW1DRnZvNkMxZ2pSZHRlMmVTS3YvU0Zx?=
+ =?utf-8?B?bW1HT0tmNmFRRGl1dGxNSmVtSTFSc0xKYWpQMkZZM05FU0JDK1E3VkMyWE5J?=
+ =?utf-8?B?aVFnM2IySGdxRkFGSXljeVd2eVdFbTZXU0tJK0pBK3dpUlN1OTJ5azUvNEpM?=
+ =?utf-8?B?aHJsVnYvYnc2enFJS3ZscTJxbUkvR0ZBMHJDWmd3dmkwaWp4TFZGUzMzSFJS?=
+ =?utf-8?B?TWNkOGNaSHBBUFhuKzY2dE5zb3hGQTNEWE10UzRRZ0FRVDlwNnRBcXRxVEpS?=
+ =?utf-8?B?bnR3K0lVeWYvNXlIYlRqWUprcGo4SnVYV1RDTHRIZVdiVHRTaW1GTDAyRlZp?=
+ =?utf-8?B?Q3J3cHhzaE5oL0o5YkpST2FzWkZuMkUxYzNTbnplQVQzZjlFV1F5VHFUSTQ0?=
+ =?utf-8?B?ZitINENoVjNBamlGMyszV3JwTitrWEM1cTB2bG9RMTg1Rm1jbU5OMzZWbE5y?=
+ =?utf-8?B?KzI0UVBUdnJSSjBNYjJxU2gwOG8zZ0E3UXloTDREbWV5UkNCYTBoVlROcjhK?=
+ =?utf-8?B?U1cwbU0vNjVubmNWc01POG8zRmtmMGhtN2J4R0RvWC9aQ3RmRVRyb2lOcVpF?=
+ =?utf-8?B?Z3R1UFhJNzNHaU4weFQ4U2ZWeXJnODNTUXpHQzJQTHd6dkdlS3VDM29GN0ds?=
+ =?utf-8?B?ZVR0VDY3b0g5Zm10S1Mzd0E3Z05RcTI5c2pvVW5qeXMrREJyaVF5alExblJx?=
+ =?utf-8?B?a1o2eldHRDBqRFA4Q0drdHFOZ1JrVHRVQnRmRXBlRHlvQXhPV3BwMHdYcVor?=
+ =?utf-8?B?N3lFN0x0aW81NU9PZ1NPdDhTOEdaamFYYk5OaG5NNEVPRExITERvSFRtQnlj?=
+ =?utf-8?B?TE1jMGxncGlSRnZVREl2ZXBKSHRvaGorcGtzUDlWdWlGaHVtY3U0N2J6aVRE?=
+ =?utf-8?Q?hi0VfYGagsV3IBrYHVck/arrs=3D?=
+MIME-Version: 1.0
+
+--0000000000004d94b505ff951e19
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Ke,
+
+Thanks, I will prepare the indico soon, then let you know.
+
+Cheers, Hide
+
+On Mon, Jul 3, 2023 at 3:06=E2=80=AFPM Ke Li <ke.li@cern.ch> wrote:
+
+> Hi all,
+>
+> Thanks for filling the doodle, the Friday 3pm is the best slot, we can
+> meet at 3pm July 7th,  I will make an indico event and send you the link
+> later, probably under tracker category.
+>
+>
+>
+> Best,
+>
+> Ke
+>
+>
+>
+> *From:* Ke Li
+> *Sent:* Saturday, July 1, 2023 12:05 AM
+> *To:* Hidetoshi Otono <hidetoshi.otono@cern.ch>; 'Zhen Hu' <
+> zhenhu@tsinghua.edu.cn>; Xin Chen <Xin.Chen@cern.ch>; Tomohiro Inada <
+> tomohiro.inada@cern.ch>; Tobias Bockh <tobias.boeckh@cern.ch>; 'Ali
+> Garabaglu' <agarabag@uw.edu>; Yuxiao Wang <yuxiao.wang@cern.ch>; Samuel
+> Zahorec <samuel.zahorec@cern.ch>; Shunliang Zhang <shunliang.zhang@cern.c=
+h
+> >
+> *Subject:* RE: Tracker alignment and Emulsion-IFT alignment
+>
+>
+>
+> Here is the doodle: https://doodle.com/meeting/participate/id/ax1o8Rnb
+>
+> Please fill your availability, let=E2=80=99s see if we can find a time go=
+od for
+> everyone.
+>
+>
+>
+> Best,
+>
+> Ke
+>
+>
+>
+> *From:* Ke Li
+> *Sent:* Thursday, June 29, 2023 09:04 PM
+> *To:* Hidetoshi Otono <hidetoshi.otono@cern.ch>; Zhen Hu <
+> zhenhu@tsinghua.edu.cn>; Xin Chen <Xin.Chen@cern.ch>; Tomohiro Inada <
+> tomohiro.inada@cern.ch>; Tobias Bockh <tobias.boeckh@cern.ch>; Ali
+> Garabaglu <agarabag@uw.edu>; Yuxiao Wang <yuxiao.wang@cern.ch>; Samuel
+> Zahorec <samuel.zahorec@cern.ch>; Shunliang Zhang <shunliang.zhang@cern.c=
+h
+> >
+> *Subject:* Tracker alignment and Emulsion-IFT alignment
+>
+>
+>
+> Hi all,
+>
+>
+>
+> As you know, the alignment is the biggest challenge for FASER now,  I hav=
+e
+> provided preliminary results for tracker alignment, but of course we need
+> further, careful and precise study, it will need lots of personpower, you
+> all are interested or committed to work on the tracker or emulsion-tracke=
+r
+> alignment, so I=E2=80=99m thinking to have a regular meeting for us to di=
+scuss
+> and review the progress together, I can also ask the alignment experts,
+> e.g. Pavel from ATLAS and Claus from CMS/millepede, to join, what do you
+> think?. It will be difficult to find a good time slot given that we are i=
+n
+> 3 timezones, anyway I will make a doodle and let=E2=80=99s see. I can giv=
+e a
+> tutorial on the current alignment procedure in the first meeting.
+>
+>
+>
+> Here is a preliminary task list, we can discuss on how to coordinate and
+> work together more efficiently.
+>
+> Task
+>
+> Description
+>
+> Priority
+>
+> person
+>
+> 1, tracker alignment
+>
+> Add more DoFs for layers/stations/modules
+>
+> 1
+>
+>
+>
+> 2, tracker alignment
+>
+> New strategy of fixing layers as the reference for coordinate system
+>
+> 2
+>
+>
+>
+> 3, tracker alignment
+>
+> Estimate the systematic uncertainty on track parameters
+>
+> 2
+>
+>
+>
+> 4, tracker alignment
+>
+> Estimate the alignment corrections for all the datasets
+>
+> 3
+>
+>
+>
+> 5, Emulsion-IFT matching
+>
+> Align IFT w.r.t other tracker stations, need to validate the IFT geometry
+> first
+>
+> 1
+>
+>
+>
+> 6, Emulsion-IFT matching
+>
+> Matching strategy, definition of residuals and extraction of alignment
+> corrections
+>
+> 1
+>
+>
+>
+> 7, (optional) Emulsion track reconstruction
+>
+> Reconstruct the emulsion track
+>
+>
+>
+>
+>
+> 8, emulsion track extension and anti-nv tagging
+>
+> Extend the emulsion track to tracker and estimate the track charge
+>
+> 3
+>
+>
+>
+>
+>
+>
+>
+> Best,
+>
+> Ke
+>
+
+--0000000000004d94b505ff951e19
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">Hi Ke,<br><div><br></div><div>Thanks, I will prepare the ind=
+ico soon, then let you know.</div><div><br></div><div>Cheers, Hide</div></d=
+iv><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On =
+Mon, Jul 3, 2023 at 3:06=E2=80=AFPM Ke Li &lt;<a href=3D"mailto:ke.li@cern.=
+ch">ke.li@cern.ch</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote"=
+ style=3D"margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-style:=
+solid;border-left-color:rgb(204,204,204);padding-left:1ex"><div class=3D"ms=
+g4013190746099711686">
+
+
+
+
+
+<div lang=3D"EN-US" style=3D"word-wrap:break-word">
+<div class=3D"m_4013190746099711686WordSection1">
+<p class=3D"MsoNormal">Hi all,<u></u><u></u></p>
+<p class=3D"MsoNormal">Thanks for filling the doodle, the Friday 3pm is the=
+ best slot, we can meet at 3pm July 7th, &nbsp;I will make an indico event =
+and send you the link later, probably under tracker category.
+<u></u><u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal">Best,<u></u><u></u></p>
+<p class=3D"MsoNormal">Ke<u></u><u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<div>
+<div style=3D"border-style:solid none none;border-top-width:1pt;border-top-=
+color:rgb(225,225,225);padding:3pt 0in 0in">
+<p class=3D"MsoNormal" align=3D"left" style=3D"text-align:left"><b><span st=
+yle=3D"font-family:Calibri,sans-serif">From:</span></b><span style=3D"font-=
+family:Calibri,sans-serif"> Ke Li
+<br>
+<b>Sent:</b> Saturday, July 1, 2023 12:05 AM<br>
+<b>To:</b> Hidetoshi Otono &lt;<a href=3D"mailto:hidetoshi.otono@cern.ch" t=
+arget=3D"_blank">hidetoshi.otono@cern.ch</a>&gt;; 'Zhen Hu' &lt;<a href=3D"=
+mailto:zhenhu@tsinghua.edu.cn" target=3D"_blank">zhenhu@tsinghua.edu.cn</a>=
+&gt;; Xin Chen &lt;<a href=3D"mailto:Xin.Chen@cern.ch" target=3D"_blank">Xi=
+n.Chen@cern.ch</a>&gt;; Tomohiro Inada &lt;<a href=3D"mailto:tomohiro.inada=
+@cern.ch" target=3D"_blank">tomohiro.inada@cern.ch</a>&gt;; Tobias Bockh &l=
+t;<a href=3D"mailto:tobias.boeckh@cern.ch" target=3D"_blank">tobias.boeckh@=
+cern.ch</a>&gt;; 'Ali Garabaglu' &lt;<a href=3D"mailto:agarabag@uw.edu" tar=
+get=3D"_blank">agarabag@uw.edu</a>&gt;; Yuxiao Wang &lt;<a href=3D"mailto:y=
+uxiao.wang@cern.ch" target=3D"_blank">yuxiao.wang@cern.ch</a>&gt;;
+ Samuel Zahorec &lt;<a href=3D"mailto:samuel.zahorec@cern.ch" target=3D"_bl=
+ank">samuel.zahorec@cern.ch</a>&gt;; Shunliang Zhang &lt;<a href=3D"mailto:=
+shunliang.zhang@cern.ch" target=3D"_blank">shunliang.zhang@cern.ch</a>&gt;<=
+br>
+<b>Subject:</b> RE: Tracker alignment and Emulsion-IFT alignment<u></u><u><=
+/u></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal" align=3D"left" style=3D"text-align:left"><u></u>&nbs=
+p;<u></u></p>
+<p class=3D"MsoNormal">Here is the doodle: <a href=3D"https://doodle.com/me=
+eting/participate/id/ax1o8Rnb" target=3D"_blank">
+https://doodle.com/meeting/participate/id/ax1o8Rnb</a><u></u><u></u></p>
+<p class=3D"MsoNormal">Please fill your availability, let<span lang=3D"ZH-C=
+N">=E2=80=99</span>s see if we can find a time good for everyone.<u></u><u>=
+</u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal">Best,<u></u><u></u></p>
+<p class=3D"MsoNormal">Ke<u></u><u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<div>
+<div style=3D"border-style:solid none none;border-top-width:1pt;border-top-=
+color:rgb(225,225,225);padding:3pt 0in 0in">
+<p class=3D"MsoNormal" align=3D"left" style=3D"text-align:left"><b><span st=
+yle=3D"font-family:Calibri,sans-serif">From:</span></b><span style=3D"font-=
+family:Calibri,sans-serif"> Ke Li
+<br>
+<b>Sent:</b> Thursday, June 29, 2023 09:04 PM<br>
+<b>To:</b> Hidetoshi Otono &lt;<a href=3D"mailto:hidetoshi.otono@cern.ch" t=
+arget=3D"_blank">hidetoshi.otono@cern.ch</a>&gt;; Zhen Hu &lt;<a href=3D"ma=
+ilto:zhenhu@tsinghua.edu.cn" target=3D"_blank">zhenhu@tsinghua.edu.cn</a>&g=
+t;; Xin Chen &lt;<a href=3D"mailto:Xin.Chen@cern.ch" target=3D"_blank">Xin.=
+Chen@cern.ch</a>&gt;; Tomohiro Inada
+ &lt;<a href=3D"mailto:tomohiro.inada@cern.ch" target=3D"_blank">tomohiro.i=
+nada@cern.ch</a>&gt;; Tobias Bockh &lt;<a href=3D"mailto:tobias.boeckh@cern=
+.ch" target=3D"_blank">tobias.boeckh@cern.ch</a>&gt;; Ali Garabaglu &lt;<a =
+href=3D"mailto:agarabag@uw.edu" target=3D"_blank">agarabag@uw.edu</a>&gt;; =
+Yuxiao Wang &lt;<a href=3D"mailto:yuxiao.wang@cern.ch" target=3D"_blank">yu=
+xiao.wang@cern.ch</a>&gt;;
+ Samuel Zahorec &lt;<a href=3D"mailto:samuel.zahorec@cern.ch" target=3D"_bl=
+ank">samuel.zahorec@cern.ch</a>&gt;; Shunliang Zhang &lt;<a href=3D"mailto:=
+shunliang.zhang@cern.ch" target=3D"_blank">shunliang.zhang@cern.ch</a>&gt;<=
+br>
+<b>Subject:</b> Tracker alignment and Emulsion-IFT alignment<u></u><u></u><=
+/span></p>
+</div>
+</div>
+<p class=3D"MsoNormal" align=3D"left" style=3D"text-align:left"><u></u>&nbs=
+p;<u></u></p>
+<p class=3D"MsoNormal">Hi all,<u></u><u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal">As you know, the alignment is the biggest challenge =
+for FASER now, &nbsp;I have provided preliminary results for tracker alignm=
+ent, but of course we need further, careful and precise study, it will need=
+ lots of personpower, you all are interested
+ or committed to work on the tracker or emulsion-tracker alignment, so I<sp=
+an lang=3D"ZH-CN">=E2=80=99</span>m thinking to have a regular meeting for =
+us to discuss and review the progress together, I can also ask the alignmen=
+t experts, e.g. Pavel from ATLAS and Claus
+ from CMS/millepede, to join, what do you think?. It will be difficult to f=
+ind a good time slot given that we are in 3 timezones, anyway I will make a=
+ doodle and let<span lang=3D"ZH-CN">=E2=80=99</span>s see. I can give a tut=
+orial on the current alignment procedure in
+ the first meeting. <u></u><u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal">Here is a preliminary task list, we can discuss on h=
+ow to coordinate and work together more efficiently.<u></u><u></u></p>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-col=
+lapse:collapse">
+<tbody>
+<tr style=3D"height:19.25pt">
+<td width=3D"361" valign=3D"top" style=3D"width:270.7pt;border:1pt solid wi=
+ndowtext;padding:0in 5.4pt;height:19.25pt">
+<p class=3D"MsoNormal">Task<u></u><u></u></p>
+</td>
+<td width=3D"379" valign=3D"top" style=3D"width:284.2pt;border-top-width:1p=
+t;border-right-width:1pt;border-bottom-width:1pt;border-style:solid solid s=
+olid none;border-top-color:windowtext;border-right-color:windowtext;border-=
+bottom-color:windowtext;padding:0in 5.4pt;height:19.25pt">
+<p class=3D"MsoNormal">Description<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-top-width:1p=
+t;border-right-width:1pt;border-bottom-width:1pt;border-style:solid solid s=
+olid none;border-top-color:windowtext;border-right-color:windowtext;border-=
+bottom-color:windowtext;padding:0in 5.4pt;height:19.25pt">
+<p class=3D"MsoNormal">Priority <u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-top-width:1p=
+t;border-right-width:1pt;border-bottom-width:1pt;border-style:solid solid s=
+olid none;border-top-color:windowtext;border-right-color:windowtext;border-=
+bottom-color:windowtext;padding:0in 5.4pt;height:19.25pt">
+<p class=3D"MsoNormal">person<u></u><u></u></p>
+</td>
+</tr>
+<tr style=3D"height:37.75pt">
+<td width=3D"361" valign=3D"top" style=3D"width:270.7pt;border-right-width:=
+1pt;border-bottom-width:1pt;border-left-width:1pt;border-style:none solid s=
+olid;border-right-color:windowtext;border-bottom-color:windowtext;border-le=
+ft-color:windowtext;padding:0in 5.4pt;height:37.75pt">
+<p class=3D"MsoNormal">1, tracker alignment<u></u><u></u></p>
+</td>
+<td width=3D"379" valign=3D"top" style=3D"width:284.2pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:3=
+7.75pt">
+<p class=3D"MsoNormal">Add more DoFs for layers/stations/modules<u></u><u><=
+/u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:3=
+7.75pt">
+<p class=3D"MsoNormal">1<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:3=
+7.75pt">
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</td>
+</tr>
+<tr style=3D"height:57.1pt">
+<td width=3D"361" valign=3D"top" style=3D"width:270.7pt;border-right-width:=
+1pt;border-bottom-width:1pt;border-left-width:1pt;border-style:none solid s=
+olid;border-right-color:windowtext;border-bottom-color:windowtext;border-le=
+ft-color:windowtext;padding:0in 5.4pt;height:57.1pt">
+<p class=3D"MsoNormal">2, tracker alignment<u></u><u></u></p>
+</td>
+<td width=3D"379" valign=3D"top" style=3D"width:284.2pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:5=
+7.1pt">
+<p class=3D"MsoNormal">New strategy of fixing layers as the reference for c=
+oordinate system<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:5=
+7.1pt">
+<p class=3D"MsoNormal">2<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:5=
+7.1pt">
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</td>
+</tr>
+<tr style=3D"height:57.1pt">
+<td width=3D"361" valign=3D"top" style=3D"width:270.7pt;border-right-width:=
+1pt;border-bottom-width:1pt;border-left-width:1pt;border-style:none solid s=
+olid;border-right-color:windowtext;border-bottom-color:windowtext;border-le=
+ft-color:windowtext;padding:0in 5.4pt;height:57.1pt">
+<p class=3D"MsoNormal">3, tracker alignment<u></u><u></u></p>
+</td>
+<td width=3D"379" valign=3D"top" style=3D"width:284.2pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:5=
+7.1pt">
+<p class=3D"MsoNormal">Estimate the systematic uncertainty on track paramet=
+ers<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:5=
+7.1pt">
+<p class=3D"MsoNormal">2<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:5=
+7.1pt">
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</td>
+</tr>
+<tr style=3D"height:57.1pt">
+<td width=3D"361" valign=3D"top" style=3D"width:270.7pt;border-right-width:=
+1pt;border-bottom-width:1pt;border-left-width:1pt;border-style:none solid s=
+olid;border-right-color:windowtext;border-bottom-color:windowtext;border-le=
+ft-color:windowtext;padding:0in 5.4pt;height:57.1pt">
+<p class=3D"MsoNormal">4, tracker alignment<u></u><u></u></p>
+</td>
+<td width=3D"379" valign=3D"top" style=3D"width:284.2pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:5=
+7.1pt">
+<p class=3D"MsoNormal">Estimate the alignment corrections for all the datas=
+ets <u></u>
+<u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:5=
+7.1pt">
+<p class=3D"MsoNormal">3<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:5=
+7.1pt">
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</td>
+</tr>
+<tr style=3D"height:38.6pt">
+<td width=3D"361" valign=3D"top" style=3D"width:270.7pt;border-right-width:=
+1pt;border-bottom-width:1pt;border-left-width:1pt;border-style:none solid s=
+olid;border-right-color:windowtext;border-bottom-color:windowtext;border-le=
+ft-color:windowtext;padding:0in 5.4pt;height:38.6pt">
+<p class=3D"MsoNormal">5, Emulsion-IFT matching<u></u><u></u></p>
+</td>
+<td width=3D"379" valign=3D"top" style=3D"width:284.2pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:3=
+8.6pt">
+<p class=3D"MsoNormal">Align IFT w.r.t other tracker stations, need to vali=
+date the IFT geometry first<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:3=
+8.6pt">
+<p class=3D"MsoNormal">1<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:3=
+8.6pt">
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</td>
+</tr>
+<tr style=3D"height:18.4pt">
+<td width=3D"361" valign=3D"top" style=3D"width:270.7pt;border-right-width:=
+1pt;border-bottom-width:1pt;border-left-width:1pt;border-style:none solid s=
+olid;border-right-color:windowtext;border-bottom-color:windowtext;border-le=
+ft-color:windowtext;padding:0in 5.4pt;height:18.4pt">
+<p class=3D"MsoNormal">6, Emulsion-IFT matching<u></u><u></u></p>
+</td>
+<td width=3D"379" valign=3D"top" style=3D"width:284.2pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:1=
+8.4pt">
+<p class=3D"MsoNormal">Matching strategy, definition of residuals and extra=
+ction of alignment corrections<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:1=
+8.4pt">
+<p class=3D"MsoNormal">1<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:1=
+8.4pt">
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</td>
+</tr>
+<tr style=3D"height:19.25pt">
+<td width=3D"361" valign=3D"top" style=3D"width:270.7pt;border-right-width:=
+1pt;border-bottom-width:1pt;border-left-width:1pt;border-style:none solid s=
+olid;border-right-color:windowtext;border-bottom-color:windowtext;border-le=
+ft-color:windowtext;padding:0in 5.4pt;height:19.25pt">
+<p class=3D"MsoNormal">7, (optional) Emulsion track reconstruction<u></u><u=
+></u></p>
+</td>
+<td width=3D"379" valign=3D"top" style=3D"width:284.2pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:1=
+9.25pt">
+<p class=3D"MsoNormal">Reconstruct the emulsion track<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:1=
+9.25pt">
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:1=
+9.25pt">
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</td>
+</tr>
+<tr style=3D"height:19.25pt">
+<td width=3D"361" valign=3D"top" style=3D"width:270.7pt;border-right-width:=
+1pt;border-bottom-width:1pt;border-left-width:1pt;border-style:none solid s=
+olid;border-right-color:windowtext;border-bottom-color:windowtext;border-le=
+ft-color:windowtext;padding:0in 5.4pt;height:19.25pt">
+<p class=3D"MsoNormal">8, emulsion track extension and anti-nv tagging<u></=
+u><u></u></p>
+</td>
+<td width=3D"379" valign=3D"top" style=3D"width:284.2pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:1=
+9.25pt">
+<p class=3D"MsoNormal">Extend the emulsion track to tracker and estimate th=
+e track charge<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:1=
+9.25pt">
+<p class=3D"MsoNormal">3<u></u><u></u></p>
+</td>
+<td width=3D"361" valign=3D"top" style=3D"width:270.8pt;border-style:none s=
+olid solid none;border-bottom-width:1pt;border-bottom-color:windowtext;bord=
+er-right-width:1pt;border-right-color:windowtext;padding:0in 5.4pt;height:1=
+9.25pt">
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal">Best,<u></u><u></u></p>
+<p class=3D"MsoNormal">Ke<u></u><u></u></p>
+</div>
+</div>
+
+</div></blockquote></div>
+
+--0000000000004d94b505ff951e19--

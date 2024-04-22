@@ -1,0 +1,162 @@
+Received: from ZR1P278MB1170.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:5c::10)
+ by ZR1P278MB1119.CHEP278.PROD.OUTLOOK.COM with HTTPS; Fri, 10 Nov 2023
+ 13:59:54 +0000
+Received: from ZRAP278MB0094.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:13::12)
+ by ZR1P278MB1170.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:5c::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6977.19; Fri, 10 Nov
+ 2023 13:59:51 +0000
+Received: from ZRAP278MB0094.CHEP278.PROD.OUTLOOK.COM
+ ([fe80::e8fb:2d8f:ddf1:76d5]) by ZRAP278MB0094.CHEP278.PROD.OUTLOOK.COM
+ ([fe80::e8fb:2d8f:ddf1:76d5%6]) with mapi id 15.20.6977.018; Fri, 10 Nov 2023
+ 13:59:51 +0000
+From: Tomohiro Inada <tomohiro.inada@cern.ch>
+To: "FASER-tracker (Discussion of the FASER tracking detector)"
+	<FASER-tracker@cern.ch>, "FASER-neutrino (FASER neutrino group)"
+	<FASER-neutrino@cern.ch>, "FASER-offline (Discussion of the FASER offline
+ software)" <FASER-offline@cern.ch>
+CC: Ke Li <ke.li@cern.ch>, Angela Maria Burger <angela.maria.burger@cern.ch>
+Subject: Re: Informal alignment meeting (Nov. 10, 3pm)
+Thread-Topic: Informal alignment meeting (Nov. 10, 3pm)
+Thread-Index: AQHaEzWYV4JcGtN94EeMLPO9lDrGRLBzlV8s
+Date: Fri, 10 Nov 2023 13:59:51 +0000
+Message-ID:
+	<ZRAP278MB0094B44906756BA7ECBE09F58DAEA@ZRAP278MB0094.CHEP278.PROD.OUTLOOK.COM>
+References:
+	<GV0P278MB11743D45EF8D6DA8020E38738DAFA@GV0P278MB1174.CHEP278.PROD.OUTLOOK.COM>
+In-Reply-To:
+	<GV0P278MB11743D45EF8D6DA8020E38738DAFA@GV0P278MB1174.CHEP278.PROD.OUTLOOK.COM>
+Accept-Language: ja-JP, en-US
+Content-Language: ja-JP
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: ZRAP278MB0094.CHEP278.PROD.OUTLOOK.COM
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-MS-Exchange-Organization-Network-Message-Id:
+	c7ce9850-3d9a-4365-ef7c-08dbe1f54f61
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+msip_labels:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=cern.ch;
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: c7ce9850-3d9a-4365-ef7c-08dbe1f54f61
+x-ms-traffictypediagnostic:
+	ZRAP278MB0094:EE_|ZR1P278MB1170:EE_|ZR1P278MB1119:EE_
+x-microsoft-antispam: BCL:0;
+x-forefront-antispam-report:
+	CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:ZRAP278MB0094.CHEP278.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:;DIR:INT;
+x-ms-exchange-crosstenant-originalarrivaltime: 10 Nov 2023 13:59:51.7540 (UTC)
+x-ms-exchange-crosstenant-network-message-id:
+	c7ce9850-3d9a-4365-ef7c-08dbe1f54f61
+x-ms-exchange-crosstenant-id: c80d3499-4a40-4a8c-986e-abce017d6b19
+x-ms-exchange-crosstenant-authsource: ZRAP278MB0094.CHEP278.PROD.OUTLOOK.COM
+x-ms-exchange-crosstenant-authas: Internal
+x-ms-exchange-crosstenant-fromentityheader: Hosted
+x-ms-exchange-transport-crosstenantheadersstamped: ZR1P278MB1170
+x-ld-processed: c80d3499-4a40-4a8c-986e-abce017d6b19,ExtAddr,ExtFwd
+x-ms-exchange-atpmessageproperties: SA|SL
+x-ms-exchange-crosstenant-mailboxtype: HOSTED
+x-ms-exchange-crosstenant-userprincipalname:
+	gg3Sy3xKFzbDfpI7MyRpYU6lxsRpk6/M9iC0uSUhqxPGtzqffYqcFsdVX4AIz6RNfa7QFL3UO/uQVQIMWLY3Fg==
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	eaEFGUwdJ7W3yejZdmSyxWZB3N0/EKwrSOXpvcWhHLW6+7PGKkXdvOo+bU7znjsbrsMxLdTqdnhBdBrkrw0YjDZCwN4liEYdsN8WxHYHiuMGrhaLmLIp2K0BUANrfpFnq9F3Ihg6j7cLJwSWSJbdFBJmUQxJHwGYHsc8CXaaYSkQdDaXmvfrG7aWMAvIu9Fnx5T2cdNcCUDn4eyf/G7vQLrgPN3gFhu/aG2GNe6M31X4If5cNFzI9h2Str+c9ocl6nP8FCOtCKf1mPwYE9RTWgp97OGzlwKY+29/t1CBVGmX8oZRZ7QtdB3ZRVl4lCHL17auCBA5Iw0/RFJnRwLDvtHxtJYaad8qh+RNXvOcpsgskS/3zNgEyLScBTe70ewD31hiEzVESihZ0uB3yFVILKYFrCNrrI+gyNcdwh/fphmPk0ewPfspeyP47WPXZh1hLDmx5/TKXQ/fU7oh+Q0vKVuEP2bG2KUK3DxmLdMHXHWsMVaCWH+65VDRQUsQv5sxxYEx6cmZhErDfLLyAQDW/zzVhE0ekPP9cbUbsHXkKZjeQrMl/DthLh1Y4XopTzVLxgolBY8QyJaulywpOl71eNwOigPuFZSc/8ey6EtC2JkUvUH+tINir210hZBwYCJEE3SYzBukK6pnGfOuM24+bBG8B9BA6yhCJQjlEH+/0r9z/rhIktmtoMoy5LhvUbmfTocXT1LvbJocYTqvs8Uk7+YtWzGITgHTJQMXQYBgOXYGOPMUOWbd1ory26IRsOrS
+Content-Type: multipart/alternative;
+	boundary="_000_ZRAP278MB0094B44906756BA7ECBE09F58DAEAZRAP278MB0094CHEP_"
+MIME-Version: 1.0
+
+--_000_ZRAP278MB0094B44906756BA7ECBE09F58DAEAZRAP278MB0094CHEP_
+Content-Type: text/plain; charset="iso-2022-jp"
+
+Dear people at CERN,
+
+The room seems not booked properly. Let's have a meeting fully online. Apologize for the short notice...
+
+Best regards,
+Tomo
+________________________________
+差出人: Tomohiro Inada <tomohiro.inada@cern.ch>
+送信日時: 2023年11月9日 19:01
+宛先: FASER-tracker (Discussion of the FASER tracking detector) <FASER-tracker@cern.ch>; FASER-neutrino (FASER neutrino group) <FASER-neutrino@cern.ch>; FASER-offline (Discussion of the FASER offline software) <FASER-offline@cern.ch>
+CC: Ke Li <ke.li@cern.ch>; Angela Maria Burger <angela.maria.burger@cern.ch>
+件名: Informal alignment meeting (Nov. 10, 3pm)
+
+Dear all,
+
+We will have our informal meeting for alignment and emulsion-ift matching at tomorrow, 3pm, here is the agenda:
+https://indico.cern.ch/event/1343967/ For people at CERN, we will meet at 4/3-004.
+
+ Best,
+Tomo & ke
+
+
+
+
+--_000_ZRAP278MB0094B44906756BA7ECBE09F58DAEAZRAP278MB0094CHEP_
+Content-Type: text/html; charset="iso-2022-jp"
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp">
+<style type="text/css" style="display:none;"> P {margin-top:0;margin-bottom:0;} </style>
+</head>
+<body dir="ltr">
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+Dear people at CERN,</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+<br>
+</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+The room seems not booked properly. Let's have a meeting fully online.&nbsp;<span style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">Apologize for the short notice...</span></div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+<br>
+</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+Best regards,</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+Tomo</div>
+<div id="appendonsend"></div>
+<hr style="display:inline-block;width:98%" tabindex="-1">
+<div id="divRplyFwdMsg" dir="ltr"><font face="Calibri, sans-serif" style="font-size:11pt" color="#000000"><b>差出人:</b> Tomohiro Inada &lt;tomohiro.inada@cern.ch&gt;<br>
+<b>送信日時:</b> 2023年11月9日 19:01<br>
+<b>宛先:</b> FASER-tracker (Discussion of the FASER tracking detector) &lt;FASER-tracker@cern.ch&gt;; FASER-neutrino (FASER neutrino group) &lt;FASER-neutrino@cern.ch&gt;; FASER-offline (Discussion of the FASER offline software) &lt;FASER-offline@cern.ch&gt;<br>
+<b>CC:</b> Ke Li &lt;ke.li@cern.ch&gt;; Angela Maria Burger &lt;angela.maria.burger@cern.ch&gt;<br>
+<b>件名:</b> Informal alignment meeting (Nov. 10, 3pm)</font>
+<div>&nbsp;</div>
+</div>
+<style type="text/css" style="display:none">
+<!--
+p
+	{margin-top:0;
+	margin-bottom:0}
+-->
+</style>
+<div dir="ltr">
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+Dear all,</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+<div class="x_elementToProof x_ContentPasted0" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+We will have our informal meeting for alignment and emulsion-ift matching at tomorrow, 3pm, here is the agenda:
+<div><span style=""><a href="https://indico.cern.ch/event/1343967/" id="LPlnk122829">https://indico.cern.ch/event/1343967/</a>&nbsp;</span><span style="">For people at CERN, we will meet at 4/3-004.</span></div>
+<div><br class="x_ContentPasted0">
+</div>
+<div class="x_ContentPasted0">&nbsp;<span style="">Best,</span></div>
+<div class="x_ContentPasted0">Tomo &amp; ke</div>
+<div><br class="x_ContentPasted0">
+</div>
+<br>
+</div>
+<div class="x_elementToProof" style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif; font-size:12pt; color:rgb(0,0,0)">
+<br>
+</div>
+</div>
+</body>
+</html>
+
+--_000_ZRAP278MB0094B44906756BA7ECBE09F58DAEAZRAP278MB0094CHEP_--

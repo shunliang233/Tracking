@@ -1,0 +1,107 @@
+Received: from GVAP278MB0907.CHEP278.PROD.OUTLOOK.COM (2603:10a6:710:47::13)
+ by ZR2P278MB1132.CHEP278.PROD.OUTLOOK.COM with HTTPS; Fri, 22 Sep 2023
+ 10:21:40 +0000
+Received: from ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:12::15)
+ by GVAP278MB0907.CHEP278.PROD.OUTLOOK.COM (2603:10a6:710:47::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6813.23; Fri, 22 Sep
+ 2023 10:21:37 +0000
+Received: from ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM
+ ([fe80::7632:9f1b:7b49:e0c7]) by ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM
+ ([fe80::7632:9f1b:7b49:e0c7%7]) with mapi id 15.20.6813.017; Fri, 22 Sep 2023
+ 10:21:37 +0000
+From: Tomohiro Inada <tomohiro.inada@cern.ch>
+To: "FASER-offline (Discussion of the FASER offline software)"
+	<FASER-offline@cern.ch>, "FASER-neutrino (FASER neutrino group)"
+	<FASER-neutrino@cern.ch>, "FASER-tracker (Discussion of the FASER tracking
+ detector)" <FASER-tracker@cern.ch>
+CC: Ke Li <ke.li@cern.ch>
+Subject: No Informal meeting today for tracker alignment and emulsion-IFT
+ matching
+Thread-Topic: No Informal meeting today for tracker alignment and emulsion-IFT
+ matching
+Thread-Index: AQHZ7T3/DiIuJ2F7XU2ehYeuxhJ5kw==
+Date: Fri, 22 Sep 2023 10:21:37 +0000
+Message-ID:
+	<ZRAP278MB009640EF5C1CB87553280A768DFFA@ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM>
+Accept-Language: ja-JP, en-US
+Content-Language: ja-JP
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-MS-Exchange-Organization-Network-Message-Id:
+	4f03204f-8cb9-4da6-c6cd-08dbbb55b47d
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+msip_labels:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=cern.ch;
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 4f03204f-8cb9-4da6-c6cd-08dbbb55b47d
+x-ms-traffictypediagnostic:
+	ZRAP278MB0096:EE_|GVAP278MB0907:EE_|ZR2P278MB1132:EE_
+x-microsoft-antispam: BCL:0;
+x-forefront-antispam-report:
+	CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:;DIR:INT;
+x-ms-exchange-crosstenant-originalarrivaltime: 22 Sep 2023 10:21:37.7620 (UTC)
+x-ms-exchange-crosstenant-network-message-id:
+	4f03204f-8cb9-4da6-c6cd-08dbbb55b47d
+x-ms-exchange-crosstenant-id: c80d3499-4a40-4a8c-986e-abce017d6b19
+x-ms-exchange-crosstenant-authsource: ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM
+x-ms-exchange-crosstenant-authas: Internal
+x-ms-exchange-crosstenant-fromentityheader: Hosted
+x-ms-exchange-transport-crosstenantheadersstamped: GVAP278MB0907
+x-ld-processed: c80d3499-4a40-4a8c-986e-abce017d6b19,ExtAddr,ExtFwd
+x-ms-exchange-atpmessageproperties: SA|SL
+x-ms-exchange-crosstenant-mailboxtype: HOSTED
+x-ms-exchange-crosstenant-userprincipalname:
+	YYZ/cAwRb15htXcaPH+7yOOU+TEt/eWxaf9Cl4qbJLLGFCvOfW4EnNLIiV5o/V2lLlI1anOcS+9A2L/pikcIng==
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	cWdTngTg0QQoy3fb5SODmbrWI3Cs1v2Yacp3w9vSr91EU3tsjkvVDLg8y8UZ1QA0c5vNRGEICCZUnbuAs6JftgrMDerHcaY2d90sTNvCNjNXOwfQAnZpdXvjUQjLCwhZoIhitDehfuz8M02zSp1phcCIzwCFToblqbPPSogN2YMlMVJ+5fxIq86DGp93AVLYreWMNw1Wz5WrMTEvH5nH8yoL464FV/nQjP8S93DeQZq1Zx64UzO899FfbtsoD3FEy4ppGtgAEwYTVSqrQ0/q+q4mJgegvZQ4+JyrmnrccskllUbLoXYdMz7JmFVSJdzBNjf+1zQPWMAc6EXPo9bSCbNMYbZyD0baJTxUkQt0Yw/AM3vnD8irFZDxFpjzaB7n7T4WP3UoH/8g+ofGZ+GGG516xYST/Y+0zYzgCTbauJtdlTprB4Jbnr7YC8m92rivVxoQQjh4DeYRtc3VuVAy/ov+ST0lkOX7Xzjohy/o4Nif9uG6MvMTYud8nflUrrkRktUx7V5XrBNg86wFd52oSXUn+XTeLyoWibRVCUHFBYBLw8ofnyJ1FSsDcU7V3TvonGWvIgVnCVot1IDIL7b3UTyGW/ZU6uU984RGkU1gBM+j4QQy9YLUD9fw88hjX9du9gE/uB4fLm9cJ34GjHNhQ6jqt0AKZ72R4RvFjar9G2m3Qw8wKCRCvZw9nhmdk5Ki/sPdWcLaA6cRqAv2Pl67Dw==
+Content-Type: multipart/alternative;
+	boundary="_000_ZRAP278MB009640EF5C1CB87553280A768DFFAZRAP278MB0096CHEP_"
+MIME-Version: 1.0
+
+--_000_ZRAP278MB009640EF5C1CB87553280A768DFFAZRAP278MB0096CHEP_
+Content-Type: text/plain; charset="iso-2022-jp"
+
+Dear all,
+
+Today there is no meeting for the tracker alignment and emulsion-IFT matching since many people are not available. See you next week.
+
+Best regards,
+Ke & Tomo
+
+--_000_ZRAP278MB009640EF5C1CB87553280A768DFFAZRAP278MB0096CHEP_
+Content-Type: text/html; charset="iso-2022-jp"
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp">
+<style type="text/css" style="display:none;"> P {margin-top:0;margin-bottom:0;} </style>
+</head>
+<body dir="ltr">
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+Dear all,</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+<br>
+</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+Today there is no meeting for the tracker alignment and emulsion-IFT matching since many people are not available. See you next week.</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+<br>
+</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+Best regards,</div>
+<div style="font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class="elementToProof">
+<span style="display: inline !important; background-color: rgb(255, 255, 255);" class="ContentPasted0">Ke &amp; Tomo</span><br>
+</div>
+</body>
+</html>
+
+--_000_ZRAP278MB009640EF5C1CB87553280A768DFFAZRAP278MB0096CHEP_--

@@ -1,0 +1,199 @@
+Received: from GV0P278MB0832.CHEP278.PROD.OUTLOOK.COM (2603:10a6:710:53::12)
+ by ZR2P278MB1132.CHEP278.PROD.OUTLOOK.COM with HTTPS; Fri, 7 Jul 2023
+ 11:50:30 +0000
+Received: from DUZPR01CA0332.eurprd01.prod.exchangelabs.com
+ (2603:10a6:10:4b8::18) by GV0P278MB0832.CHEP278.PROD.OUTLOOK.COM
+ (2603:10a6:710:53::12) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6588.12; Fri, 7 Jul
+ 2023 11:50:28 +0000
+Received: from DB5EUR02FT030.eop-EUR02.prod.protection.outlook.com
+ (2603:10a6:10:4b8:cafe::e6) by DUZPR01CA0332.outlook.office365.com
+ (2603:10a6:10:4b8::18) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6565.25 via Frontend
+ Transport; Fri, 7 Jul 2023 11:50:27 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.208.47)
+ smtp.mailfrom=gmail.com; dkim=none (message not signed)
+ header.d=none;dmarc=fail action=none header.from=cern.ch;compauth=pass
+ reason=704
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.208.47 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.208.47; helo=mail-ed1-f47.google.com; pr=C
+Received: from mail-ed1-f47.google.com (209.85.208.47) by
+ DB5EUR02FT030.mail.protection.outlook.com (10.13.58.116) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6565.25 via Frontend Transport; Fri, 7 Jul 2023 11:50:27 +0000
+Received: by mail-ed1-f47.google.com with SMTP id 4fb4d7f45d1cf-51e429e1eabso489897a12.2;
+        Fri, 07 Jul 2023 04:50:27 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1688730627; x=1691322627;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=9A1H1vsrWYXlP1iJmm3TCSb+TQYhoUVpheQeFNx+xUw=;
+        b=N6LpKMQyVYvSMpDbP74WuNGV5dKteFV2Fg7reIjh75f9vFDgeCIxLKkFeduGNvuvwB
+         gFDcYxhrZkn2dPwHoHnt1cMfVSeb+7HO1hdfO7vMgbevhA27AR+JVzRna58zXaO/vsuZ
+         8x/9YpRazs0tQU0OJInHJjRU+OXsxjmkhLUvT+x7T/pm8eeAc9IbrZ1uMJ0onFHqCiF6
+         DCOqqowxSCZoj7HlMpA/18CFtKqSaZkAkNuiy8DqcY5j44WP5OiVFhiCd7FP5qP5dZDh
+         NXvnpc1BYwo9AVSsWwT1fpbkRDlfaRm0LZFZrbFcd91Y5Q7Wyqva/FnMx7TZGl4HDa4u
+         rhxg==
+X-Gm-Message-State: ABy/qLaUx2vmJsRInYU9SLcqyU+I9VsY+NDNHubzyklFE0EFYP6NADBJ
+	Ku8JPUjrYSLlNBbNDo7SlrXf8J4fPwlBth7caafvn/EHj4KSo2Uh
+X-Google-Smtp-Source: APBJJlGKdKQmOcvw4z0XrQWBtMkGMNwTOmLvG2sx5eaQj+wELptTavCjC7FrujxOFYDQjvRYH4641V0Iyx/K3m/kais=
+X-Received: by 2002:a50:ed8a:0:b0:51d:961a:b27a with SMTP id
+ h10-20020a50ed8a000000b0051d961ab27amr3674291edr.7.1688730626712; Fri, 07 Jul
+ 2023 04:50:26 -0700 (PDT)
+References: <GVAP278MB031269F836929D422CC4C10BE02CA@GVAP278MB0312.CHEP278.PROD.OUTLOOK.COM>
+In-Reply-To: <GVAP278MB031269F836929D422CC4C10BE02CA@GVAP278MB0312.CHEP278.PROD.OUTLOOK.COM>
+From: Hidetoshi Otono <Hidetoshi.Otono@cern.ch>
+Date: Fri, 7 Jul 2023 13:50:10 +0200
+Message-ID: <CAB2THhAt=QmDJ5zYGbnHHDpE_KH3JokR1001LZGdCL0Xae+-fw@mail.gmail.com>
+Subject: Re: Informal meeting for Tracker alignment and Emulsion-IFT matching
+ (July 7, 3pm)
+To: Ke Li <ke.li@cern.ch>, FASER-tracker <FASER-tracker@cern.ch>, FASER-neutrino@cern.ch
+Cc: Tomohiro Inada <tomohiro.inada@cern.ch>, Ali Garabaglu <agarabag@uw.edu>, 
+	Yuxiao Wang <yuxiao.wang@cern.ch>, Shunliang Zhang <shunliang.zhang@cern.ch>, 
+	Zhen Hu <zhenhu@tsinghua.edu.cn>, Xin Chen <Xin.Chen@cern.ch>, Hao Pang <hao.pang@cern.ch>, 
+	Samuel Zahorec <samuel.zahorec@cern.ch>, Tobias Bockh <tobias.boeckh@cern.ch>
+Content-Type: multipart/alternative; boundary="00000000000020697e05ffe43d43"
+Return-Path: hi.otono@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 07 Jul 2023 11:50:27.7554
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ b28e89cc-9d9d-4c91-87d0-08db7ee05b98
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: c80d3499-4a40-4a8c-986e-abce017d6b19:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DB5EUR02FT030:EE_|GV0P278MB0832:EE_|ZR2P278MB1132:EE_
+X-MS-Exchange-Organization-AuthSource:
+ DB5EUR02FT030.eop-EUR02.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: b28e89cc-9d9d-4c91-87d0-08db7ee05b98
+X-LD-Processed: c80d3499-4a40-4a8c-986e-abce017d6b19,ExtAddr,ExtFwd
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:209.85.208.47;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-ed1-f47.google.com;PTR:mail-ed1-f47.google.com;CAT:NONE;SFS:(13230028)(4636009)(451199021)(4006050)(5660300002)(75640400001)(33964004)(54906003)(110136005)(1096003)(8676002)(42186006)(4326008)(6636002)(450100002)(336012)(6666004)(966005)(55446002)(356005)(7596003)(42882007)(7636003)(166002)(83170400001)(53546011)(9686003)(26005);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Jul 2023 11:50:27.7554
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: b28e89cc-9d9d-4c91-87d0-08db7ee05b98
+X-MS-Exchange-CrossTenant-Id: c80d3499-4a40-4a8c-986e-abce017d6b19
+X-MS-Exchange-CrossTenant-AuthSource: DB5EUR02FT030.eop-EUR02.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: GV0P278MB0832
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.0128375
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6588.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?d3hkeVIyWWF2YUxRNGl4R1dKaHF0QW9yNGtreTlqQitwems3a3ZqRUpweEE4?=
+ =?utf-8?B?NGs4NzFrYWs2dWJGSHMzTmxvc1hxQnpteEl5ckFzMk9IY2lub3NxZWhZdFBU?=
+ =?utf-8?B?QjUrcHZhbnM5cjZYcUc0cTBzZW9tUWVOVmVyWFgrMk1QN2t6b2VuamFsUUFy?=
+ =?utf-8?B?bVBVK0VVTTRPaTF4TEQ1YW1ZZ0dXeGtZWHNRMXQydkJ6am5MOCtWVUN2TVBL?=
+ =?utf-8?B?RkhjN1ZMczUzSUZWUU1GNTY2dTRCU0loWGpneXIwTzRsMCtIeUZadW9zdzVX?=
+ =?utf-8?B?Ym5aNEcyNFRnbC83UjZ5WUw3dXFManREN1l2Rm5YVDZGZWQxUEFsYWhWMTRx?=
+ =?utf-8?B?WEZ6QnVQbENzSTBKWVd2QVNRbzAwcFgwbzIwVWZhcXRuZFRjYVp5ejJOcDNl?=
+ =?utf-8?B?Y0k1WlVnckFjMThmZlo4bHM3eURseHNURzVXRFh5ZjdTT280ZVZxWHNMVndi?=
+ =?utf-8?B?ZVVwRjlMeU5RQ2VwRmZSUGpXQ2IwVE5kaDV2VjE0WFo2USszd3FiVkJOeDFF?=
+ =?utf-8?B?Sm5kakNzZndSM1VFcmpsNS80Z3NSWC8wa0VGMlY0cWI2bW93MStWTWZMZmVH?=
+ =?utf-8?B?anBMQUdTNXZ1WTFIMS9uMWVZSmlXVXMzdzNNQkgzQWw5Q011cGk4TThuK056?=
+ =?utf-8?B?a2xvNllla1R6R0MreWR5ZTg3RFR3SGhmZm5KeU4zd1QxbEFZWVZBa01XQ1BK?=
+ =?utf-8?B?bGZscVR0Z0cvamMwcGNNK0J5aUpzM3RES3U2ZGFVL3R2SnluMUpMK3Q0dHdi?=
+ =?utf-8?B?b1Bkby9hWlE1bmlKeXQ4R3N0azdhOSt0QXdaVlBvdVEyNSsyRzU3ai9RWGY5?=
+ =?utf-8?B?WCtEUmE1Wmczb0VpMEdVVENNOUZ3c05oRXR1QWNzbHFJQmZ2eklEcHNpL09L?=
+ =?utf-8?B?akRJcDVnQ1NTSjdqQUpZdTNpbXROb0xXKzFvU3ZHd3dTMml2YlhiU0cyOXN0?=
+ =?utf-8?B?TXphbU5sTTA3NWs3bTNGUm9PTUZ5TVF3ZDZGdHlDVmpmKzJVQ2Z1K01qRWRY?=
+ =?utf-8?B?K0I1L1Q1T1FjbTNMdjdYVmZQYUZlaFZBSUdqTjBRQ2xKOEx1VzAxbWx2REsx?=
+ =?utf-8?B?YXNmOGFINmp0MDNjaWpPM21hcVUrN3J4Ykd6WGF3MW9JZ1M3MVZJL1hHbDRL?=
+ =?utf-8?B?cXdhajRnYmtXVmdzaTRESlVUUFhsNExtS2NIWGZTL1FiTkVlNE81YzVHcnRo?=
+ =?utf-8?B?WHdZYjNLZDZvSDJtaS9lcTYzZkJjYUhrY1BNcXZGejVib3FZQXk0SkhEUjZk?=
+ =?utf-8?B?YUo2Nmh2aVltZEtrMTNuQ3BJOUFPSEVkMkJ6ZDdTRjBEa1dLWUtoK2lSL0ww?=
+ =?utf-8?B?aHB1SWZTWitrNFNma01ZRFZ3b2JoYXZPNjJWd2NuQWlKRlgrb1YxUDJWeE1P?=
+ =?utf-8?B?elp3UTFLZGE3NEpFSjhqY2ZuclFaNTFtd29VdXNXTFMvd1ZWQmRoKzlRSzhY?=
+ =?utf-8?B?Rm9QWHZKc2w3QmxrNjVXWE5QaWh2VHBPOE81c21QV3REVklLZHRqeUEyVjE4?=
+ =?utf-8?B?NHg2b2I1ZklzQWdKVkd4T0pkeE9MdldqVVVUOThuSVUrSUZ5WFArbWtkbDZD?=
+ =?utf-8?B?RmpRdz09?=
+MIME-Version: 1.0
+
+--00000000000020697e05ffe43d43
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+To those who are in tracker project and FASERnu project,
+
+We will have the regular informal meeting for alignment and Emulsion-IFT
+matching.
+https://indico.cern.ch/event/1305123/
+
+It would be great if you can join and participate in any of the tasks
+discussed in the meeting.
+
+Cheers, Hide
+
+On Thu, Jul 6, 2023 at 11:31=E2=80=AFPM Ke Li <ke.li@cern.ch> wrote:
+
+> Hi all,
+>
+>
+>
+> We will have our first informal meeting for alignment and emulsion-ift
+> matching at tomorrow, 3pm, here is the agenda:
+> https://indico.cern.ch/event/1305123/
+>
+> I will present a short overview of the current alignment, then we can go
+> to the round-table discussions for each task.
+>
+>
+>
+> Best,
+>
+> Ke
+>
+
+--00000000000020697e05ffe43d43
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div>To those who are in tracker project and FASERnu project=
+,&nbsp;</div><div><br></div><div>We will have the regular informal meeting =
+for alignment and Emulsion-IFT matching.<br></div><div><a href=3D"https://i=
+ndico.cern.ch/event/1305123/" target=3D"_blank">https://indico.cern.ch/even=
+t/1305123/</a><br></div><div><br></div><div>It would be great if you can jo=
+in and participate in any of the tasks discussed in the meeting.</div><div>=
+<br></div><div>Cheers, Hide</div></div><br><div class=3D"gmail_quote"><div =
+dir=3D"ltr" class=3D"gmail_attr">On Thu, Jul 6, 2023 at 11:31=E2=80=AFPM Ke=
+ Li &lt;<a href=3D"mailto:ke.li@cern.ch">ke.li@cern.ch</a>&gt; wrote:<br></=
+div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;bor=
+der-left-width:1px;border-left-style:solid;border-left-color:rgb(204,204,20=
+4);padding-left:1ex"><div class=3D"msg-679417559942163035">
+
+
+
+
+
+<div lang=3D"EN-US" style=3D"overflow-wrap: break-word;">
+<div class=3D"m_-679417559942163035WordSection1">
+<p class=3D"MsoNormal">Hi all,<u></u><u></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal">We will have our first informal meeting for alignmen=
+t and emulsion-ift matching at tomorrow, 3pm, here is the agenda:
+<a href=3D"https://indico.cern.ch/event/1305123/" target=3D"_blank">https:/=
+/indico.cern.ch/event/1305123/</a><u></u><u></u></p>
+<p class=3D"MsoNormal">I will present a short overview of the current align=
+ment, then we can go to the round-table discussions for each task.<u></u><u=
+></u></p>
+<p class=3D"MsoNormal"><u></u>&nbsp;<u></u></p>
+<p class=3D"MsoNormal">Best,<u></u><u></u></p>
+<p class=3D"MsoNormal">Ke<u></u><u></u></p>
+</div>
+</div>
+
+</div></blockquote></div>
+
+--00000000000020697e05ffe43d43--

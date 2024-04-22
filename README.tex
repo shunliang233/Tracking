@@ -1,0 +1,96 @@
+\section{Set Environment of Ke's Calypso Project}
+\begin{itemize}
+	\item Clone \verb|globalalign| branch in Ke's calypso directory
+	\begin{itemize}
+		\item \verb|git clone --recursive -b globalalign https://gitlab.cern.ch/keli/calypso|
+		\item \verb|-b| 选项指定拷贝的 branch 名称。
+		\item \verb|--recursive| 选项要求克隆包含子模块，子模块通常是开源库或第三方库，没有该选项就不会克隆子模块。
+	\end{itemize}
+	\item Set up environment according to \verb|README.md| in the project root directory.
+	\begin{itemize}
+		\item \verb|export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase|
+		\item \verb|source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh|
+		\item \verb|asetup --input=calypso/asetup.faser Athena,22.0.49|
+	\end{itemize}
+	\item Make sure the uncomment of some code in calypso
+	\begin{itemize}
+		\item In file: \verb|Tracking/Acts/FaserActsKalmanFilter/src/components/FaserActsKalmanFilter_entries.cxx|
+		\begin{itemize}
+			\item \verb|#include "../CKF2GlobalAlignment.h"|
+			\item \verb|DECLARE_COMPONENT(CKF2GlobalAlignment)|
+		\end{itemize}
+		\item In file: Tracking/Acts/FaserActsKalmanFilter/CMakeLists.txt
+		\begin{itemize}
+			\item \verb|CKF2GlobalAlignment.h|
+			\item \verb|src/CKF2GlobalAlignment.cxx|
+		\end{itemize}
+	\end{itemize}
+	\item Build the calypso project
+	\begin{itemize}
+		\item \verb|mkdir build ; cd build|
+		\item \verb|cmake -DINSTALL_CONDB=ON -DCMAKE_INSTALL_PREFIX=../install -S .. -B . ; make -j 32 ; make install|
+		\item Variable \verb|INSTALL_CONDB| means ``Generate and install a conditions database''.
+		\item For alignment study, we need to build a new geometry rather than the ideal one.
+		\item To use the custom (定制的) geometry, we need to enable the \verb|CONDB| flag, i.e. \verb|cmake -DINSTALL_CONDB=ON ...| 
+	\end{itemize}
+\end{itemize}
+
+
+\section{Run Alignment Algorithm}
+\begin{itemize}
+	\item Before running anything in a new shell, it is MANDATORY to do some environment setup. 
+	\begin{itemize}
+		\item \verb|export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase|
+		\item \verb|source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh|
+		\item \verb|asetup --input=calypso/asetup.faser Athena,22.0.49|
+		\item \verb|cd ./install ; source ./setup.sh|
+	\end{itemize}
+	\item Copy run templates written by Samuel into your \verb|install| directory.
+	\begin{itemize}
+		\item \verb|scp -r shunlian@lxplus.cern.ch:/afs/cern.ch/work/s/sazahore/public/templates ./install|
+	\end{itemize}
+
+
+
+\end{itemize}
+
+
+6. edit some files in template directory
+Edit run_faserkf_data_template.sh
+If your template directory is at /???/run/template, 
+line 4 change to “cd /???/“
+line 15 chane to “/???/run/result/“
+(Edit maketemplate_data.sh if you want to change input.)
+(using the initial paramter, you will get empty root file as a result of 8., 
+it is good for debug because the size of input is small, but
+you cannot use it after 10., so if you succeded in runnning job once, you should change “nrun”)
+
+7. run bash script
+source ./maketemplate_data.sh
+
+8. submit job to condor
+condor_submit kfalign_data.sub  
+
+9. install and make millipede-II according to https://www.desy.de/~kleinwrt/MP2/doc/html/index.html
+There are two options
+
+10. Edit convert2mille_v2.C
+define input as output from condor (may in run/result/0(or other number)/) 
+define output (name is arbitary but it must be binaryfile(.bin) ) in millipede-ii directory 
+
+11. copy mp2con-noIFT.txt and mp2str-noIFT-3layersfixed.txt to milli-pede-ii directory
+10’.
+define input as output from condor (may in run/result/0(or other number)/) (it is same asa 10.)
+define output (name is arbitary but it must be binaryfile(.bin) ) in  arbitary directory
+set PATH to millipede-ii
+(For example, echo “export PATH=\$PATH:/?/millepede-ii/” >> env.sh)
+
+11’. copy mp2con-noIFT.txt and mp2str-noIFT-3layersfixed.txt to same directory as binary file
+(this option need to set PATH, but can keep clean in millipede-ii directory and make increase flexibility because you can run pede in anywhere)
+
+12. edit mp2str-noIFT-3layersfixed.txt
+set input as your binay file name (line 7)
+
+13. run pede
+pede mp2str-noIFT-3layersfixed.txt Edited
+

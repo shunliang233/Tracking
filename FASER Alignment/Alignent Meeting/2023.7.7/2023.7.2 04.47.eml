@@ -1,0 +1,602 @@
+Received: from ZRAP278MB0077.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:14::15)
+ by ZR2P278MB1132.CHEP278.PROD.OUTLOOK.COM with HTTPS; Sun, 2 Jul 2023
+ 02:47:38 +0000
+Received: from AM6PR10CA0071.EURPRD10.PROD.OUTLOOK.COM (2603:10a6:209:80::48)
+ by ZRAP278MB0077.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:14::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6565.8; Sun, 2 Jul
+ 2023 02:47:37 +0000
+Received: from AM0EUR02FT032.eop-EUR02.prod.protection.outlook.com
+ (2603:10a6:209:80:cafe::73) by AM6PR10CA0071.outlook.office365.com
+ (2603:10a6:209:80::48) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6544.26 via Frontend
+ Transport; Sun, 2 Jul 2023 02:47:37 +0000
+Authentication-Results: spf=pass (sender IP is 168.245.120.5)
+ smtp.mailfrom=em1511.doodle.com; dkim=pass (signature was verified)
+ header.d=doodle.com;dmarc=pass action=none
+ header.from=doodle.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of em1511.doodle.com
+ designates 168.245.120.5 as permitted sender)
+ receiver=protection.outlook.com; client-ip=168.245.120.5;
+ helo=o3.sg.e.doodle.com; pr=C
+Received: from o3.sg.e.doodle.com (168.245.120.5) by
+ AM0EUR02FT032.mail.protection.outlook.com (10.13.54.152) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6565.14 via Frontend Transport; Sun, 2 Jul 2023 02:47:37 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=doodle.com;
+	h=content-type:from:mime-version:subject:to:cc:content-type:from:
+	subject:to;
+	s=s1; bh=zVSFxlJR6E2nx6rmBpihI+iiQPyQff3lWbHWqWiVRrc=;
+	b=OkDo2V8qlsrTI0gx5aIJljhwhWV20EFZaumhOxfC686a3zTTMpV8T66cUhUmU5pZOXXP
+	RaoBcOkVsrWjQIkRFRisTmvFOm8Q/HzOVECi1+box2uR4m51b3DVHscYS7ov26JUV59Pkv
+	egURJWq5/f0J1c5dW5dHGzD16Jae846ZCOFw9vsswwPskBJHka4/Jli3Jkq4Mt2/cGJ/vC
+	J24vhERrDgt2MSbqU0qhnRM95Lnss39FKY7gRDY82phmqFKlY7fiDTm2SGt8FV3L/XgcE3
+	Vk8UIwfQ4DElim2Nqy57+nfJ5hh+uY8wOehI3MgQtIpZysLq1FIf+5+vKrHgy/wQ==
+Received: by filterdrecv-567b479f9-5nxdz with SMTP id filterdrecv-567b479f9-5nxdz-1-64A0E547-12
+        2023-07-02 02:47:35.578517124 +0000 UTC m=+4504141.512762268
+Received: from MTAzNzE0NzI (unknown)
+	by geopod-ismtpd-10 (SG) with HTTP
+	id njzZMZmmRFm0_S4sn-Gf_Q
+	Sun, 02 Jul 2023 02:47:35.364 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=5ec719d451b41deaf6f06c0fb4cd547ab94ebdf656702b10beaa06c53f84
+Date: Sun, 02 Jul 2023 02:47:35 +0000 (UTC)
+From: Doodle <mailer@doodle.com>
+Message-ID: <njzZMZmmRFm0_S4sn-Gf_Q@geopod-ismtpd-10>
+Subject: Response submitted for Tracker Alignment & Emulsion-IFT matching
+X-SG-EID:
+ =?us-ascii?Q?XeVjhRdgkGKCvA0oK=2F+Bzo3=2FtjnFBvhPh3afs2yffjDrzpx30zkUYbqS22S3yr?=
+ =?us-ascii?Q?gSxHZ7Fwx7o3IhtXrXjyQBKD1B=2FQfE0MM8tXHo1?=
+ =?us-ascii?Q?dw5l2=2F1amci0YAs2ZOejB41+s+A0eJ=2Fr4QgPtl2?=
+ =?us-ascii?Q?oZVdvxe5ljQjBSvCG01ooNYKsW2CVIRKmFGYPOG?=
+ =?us-ascii?Q?aFnhUQl=2FTOqnZPHTxC45Ee8yuHB4Vdqi1AleVAk?=
+ =?us-ascii?Q?MM7Zh49ylSIiv6VHfWxawww0UqD7cXQZTf8jBI?=
+X-SG-ID:
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FKHgAsE=2FCUk5eZaRe5Ltr?=
+ =?us-ascii?Q?cbD6a4x6yO1cS0WIFLqOFWvp2jRUz0AMpb9rhTm?=
+ =?us-ascii?Q?U9t3a7ZlRwZ=2FUJtQsHbq61d8ii=2F5DPmxL21DUwX?=
+ =?us-ascii?Q?x3uP+ynFjws04gz+v=2FDT8nO5m=2FuZhuFk3IQ9=2FTy?=
+ =?us-ascii?Q?tAYqbN5AMi9AlSpA2ET0w2H71i0pu1mU0d+jT5t?=
+ =?us-ascii?Q?M44MkgBPeLpZIhQqY=3D?=
+To: shunliang.zhang@cern.ch
+X-Entity-ID: IhfSuH/EbKQCv21FsFQGww==
+Return-Path: bounces+10371472-f49f-shunliang.zhang=cern.ch@em1511.doodle.com
+X-MS-Exchange-Organization-ExpirationStartTime: 02 Jul 2023 02:47:37.5567
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ ee17aeb5-9a80-4a60-de3c-08db7aa6b22d
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: c80d3499-4a40-4a8c-986e-abce017d6b19:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ AM0EUR02FT032:EE_|ZRAP278MB0077:EE_|ZR2P278MB1132:EE_
+X-MS-Exchange-Organization-AuthSource:
+ AM0EUR02FT032.eop-EUR02.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: ee17aeb5-9a80-4a60-de3c-08db7aa6b22d
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:3;
+X-Forefront-Antispam-Report:
+ CIP:168.245.120.5;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:o3.sg.e.doodle.com;PTR:o3.sg.e.doodle.com;CAT:NONE;SFS:(13230028)(4636009)(7916004)(286005)(451199021)(1690799014)(6486002)(966005)(58800400005)(6512007)(26005)(9686003)(336012)(9316004)(166002)(76236004)(7596003)(356005)(7636003)(83170400001)(33716001)(6916009)(36736006)(22186003)(8676002)(1096003)(4006050)(75640400001)(76899015);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Jul 2023 02:47:37.1036
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ee17aeb5-9a80-4a60-de3c-08db7aa6b22d
+X-MS-Exchange-CrossTenant-Id: c80d3499-4a40-4a8c-986e-abce017d6b19
+X-MS-Exchange-CrossTenant-AuthSource:
+ AM0EUR02FT032.eop-EUR02.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: ZRAP278MB0077
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6839125
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6565.004
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?CMURB4/f95So2fYUnqiEDgNe8Ea/ukPUr15zgVQ3BtNs8EZn3pf1aU3OvVC5?=
+ =?us-ascii?Q?nFwNsk1A7evjH2iNvlgc6xzO2qUTqWzSkhvvzsgph60KGhdNsnqKI6dX6lvf?=
+ =?us-ascii?Q?2/it4RuVJbGw4R7QJCvqG6i4zaHBYcnJ/5Cs9oahFH8Gh7+p3X+krePO0GWv?=
+ =?us-ascii?Q?lR5i+Grkl2hsB1DttUzhtWm3MkKPJapfA3jknlG9Zoam8ATECXayQuze5WhW?=
+ =?us-ascii?Q?Ja+oIdMGCK5e6sRtcfOi328TPatmGFmqpH6Kgn3C9IeIJ2c9L96C+Svy/GqK?=
+ =?us-ascii?Q?1+8v0ivx8VuK9msq9HcmrjBn+sFKF49Sd0ZwKrN79MMOvBgp6tOD7hCiXQeQ?=
+ =?us-ascii?Q?40y5UoPdBo6hdubRf/DTwYDAQyGcySN9lXMiYFx1HaMz+PetOuup7dqXIdyW?=
+ =?us-ascii?Q?0CQe9jJX6RgFWqnX+bKlgs4afIMZBhLx0dKCbQ8tpW/VNWSWoGLnqlKM5zaF?=
+ =?us-ascii?Q?hASKvDvvvVS9fAhQmnXtzHHQQaC0t4RJx1oeK2gcyRzzg/od85pulKBQuvA2?=
+ =?us-ascii?Q?orprLc+pWwU2npK8FwEdG8fXERljogs5nkIPI2EstVPRh3d9TysysLW7BOno?=
+ =?us-ascii?Q?WRlbaFJz3THucpqG2RoUO4GqpJBHa89XM+yjcUskA+DIgu0fQve3SmozP44T?=
+ =?us-ascii?Q?9s0QhQ32iCgIwUKWNFWKFjjhpUTydQTKJI6pZH2lC8nzjVDiZy0TOQyuEo+a?=
+ =?us-ascii?Q?BLcq2WraTlN6pWADG4EK8XjT+bGh2nRqdwgj+0HYoVupPUNX18r+I2vKH2Iu?=
+ =?us-ascii?Q?hl73AVLvnXjNRCQ0mrD3XPAEv63OayBHE1uaVdQqSSbHg/QQP/GhIQ1C7mqJ?=
+ =?us-ascii?Q?DaFg8taQJmvKRuIhN7s4KqaTD9mWu6W219hFccg4sGG5R6nGWK+j6gaBo/rR?=
+ =?us-ascii?Q?+NzbNfxpzqdGus6RePXiNnw8NJylrPWhKUNbDNhirkuHLtrt5XEJqW7gwNqO?=
+ =?us-ascii?Q?VWJ+cWQjEB14/DaMjOA4GRUPQUILIwwvKoVCoXxlwNo+yuAodJBf65ApyqsW?=
+ =?us-ascii?Q?VKGM7ZEIQiZgnKDDF8rMuyc92NHhqIUdKw25LqVIofMGbWwhAa2HmlA/FAGE?=
+ =?us-ascii?Q?jlm3FkNzV4DxHJiFNKnX+kvjuARLpvaBEjk+1WnVUqMYvSZg02wziOv6ZSYL?=
+ =?us-ascii?Q?Sm85fzoq5Gbk/qcfERiB+irbPMhzGAQAGQ6m6WMkHfOlMAnrcYDKiONUBlqa?=
+ =?us-ascii?Q?fo5bZwJlKkAnY0XYdINIySLfTOU/cZZhGpgRkl8iEhg/piLuuRDmmgklIFlb?=
+ =?us-ascii?Q?PR2+l9zw2V2JZD91N/z8SY9zig8NEsn4QmUwKuvVKkZe93KaCawynCCDdWMu?=
+ =?us-ascii?Q?xYH+3jjU1pgqENNd1XyYxFnFHiFM10HMrsxv49LUePnknBTKDxSwXiG1LUiF?=
+ =?us-ascii?Q?KLZaW/a9hJJVuy/saRiWxiVbkN+WmcqdZwH5JObCwXgiV9eN3W4nDe6Mhpdl?=
+ =?us-ascii?Q?wkYfCXiqlLAG3+O5toYCDOkB17dKB6xgsfdq8njATuz3sgcp7TURTp570f4A?=
+ =?us-ascii?Q?dzmBkKhZ7ElP1OFx7L2fdvjrHTbA4DWWgaZgxdU/J+8zQ2pRjDZtoUfBUxvg?=
+ =?us-ascii?Q?6fWXh0fAoc4SyRXCA22DJDIaWrcMEnTWrfwT53HhSiIYexrgpTpBRGdzJnHT?=
+ =?us-ascii?Q?8G5YFXVyaTwnwtNgzqpeGNBwLKBBTD8c0cSmdQvhmTiZK6YIYVZMyNNsKalg?=
+ =?us-ascii?Q?5sXAqZf95J7BWY2OEFKFIOduwpQRpyVjXa7ysoxkRarjFiZ7zBDgqK3WL6A5?=
+ =?us-ascii?Q?GUFs2jTLM7Tp1DHM7W2Fz4M4WvkeNN3dEhG0t1iRB2/qVws7MRsSvjc8JyO5?=
+ =?us-ascii?Q?gqMDhk/57DU/E+vZ9Wy323m2jkghgbuGJeU6MvYh/10qf78BJ2C6XiUt?=
+MIME-Version: 1.0
+
+--5ec719d451b41deaf6f06c0fb4cd547ab94ebdf656702b10beaa06c53f84
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+
+Your response is now in the books.
+
+( https://url1812.doodle.com/ls/click?upn=3DAeiPaA0SmefWmHE8c70u1qyb9JNgpeE=
+c5cX6u9H2-2FO8-3DPccQ_fA69T5a-2FNBuVRz1QYkqdlpNVZ50H2Km527qPTNwowDQki7E655-=
+2Fu2i-2B6LU7a8BinflHrDiWzEo8bKwfJzz-2Fj-2Fj7DMRnI17SRgybcTVDFluSDxGdgf5k2Q5=
+dA7eTWp2YDItTdHxkxnntOCw0N9rIaGXyPYj2glkjWPVgw-2BImcaIWBHyJY5zFkElsDA1lUbwY=
+o4dWdz45smyctPL6M3QZXuo55BQEoNRi6ghaPqxXVUT2hze0hFNS0O-2FWvHcte8zN7WCFtHeCz=
+Tqe9qIkxYVdvH8KLATZS45Q2neNikbwry6qE41Vk0fixI4P2sAcQ3TKyONDwpr9NCXMU-2F5x8S=
+wXcVP8IMSVQzHfwyfm8GUXpPP1Ci3jvqQNW-2FOKfEoullXEhqV0kYclGYMHoDNRUJeJFYBrxl1=
+RQk7J2eckn125wDcg-3D )
+
+Response submitted!
+Hi Shunliang Zhang,
+We submitted your response to the invite for <b>Tracker Alignment & Emulsio=
+n-IFT matching</b>.
+As long as the event isn't booked, you can edit your response and change yo=
+ur chosen times.
+
+Review response ( https://url1812.doodle.com/ls/click?upn=3DAeiPaA0SmefWmHE=
+8c70u1nry0YUYJl4TTmYtu7h0-2BLDBcnwx13d8C-2Bq9K8-2B5I7f5putOOr34-2Bvy6dXLOUv=
+jk1SLz-2Bhq5zdFI4MCvV-2Bc6kC7J6c8lwEhscgou1TTN6z61XhPiKM6Z0RM0m0WfW30twRs4x=
+5nqryz1qoPHi-2FNMDBd0rwZT5GKbsiqpf2VmPgGyUSsb_fA69T5a-2FNBuVRz1QYkqdlpNVZ50=
+H2Km527qPTNwowDQki7E655-2Fu2i-2B6LU7a8BinflHrDiWzEo8bKwfJzz-2Fj-2Fj7DMRnI17=
+SRgybcTVDFluSDxGdgf5k2Q5dA7eTWp2YDItTdHxkxnntOCw0N9rIaGXyPYj2glkjWPVgw-2BIm=
+caIWBHyJY5zFkElsDA1lUbwYo4dWdz45smyctPL6M3QZXuo55BQEoNRi6ghaPqxXVUT2hze0hFN=
+S0O-2FWvHcte8zN7WCFtHeCzTqe9qIkxYVdvHyToF0C1-2F9SvugGBxMn6rLVq-2F6u6cR93T-2=
+BVg2IVtNVKrvFUMoy9Bsy-2FIjiSU5L9FZMRDCNgBRTeLo4TXR4IGDlLuC4jT4u7B2abtvcP3ex=
+xi2Uo4jVoKhdNPDCfLqcUB0P8FkYuhhvPSQrYhLRHobvY-3D )
+
+
+--5ec719d451b41deaf6f06c0fb4cd547ab94ebdf656702b10beaa06c53f84
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+
+<!doctype html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:=
+schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
+ce"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+><title>
+  </title>
+  <!--[if !mso]><!-- -->
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+  <!--<![endif]-->
+ =20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+  <style type=3D"text/css">
+    #outlook a {
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    p {
+      display: block;
+      margin: 13px 0;
+    }
+  </style>
+  <!--[if mso]>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+  <!--[if lte mso 11]>
+        <style type=3D"text/css">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+  <style type=3D"text/css">
+    @media only screen and (min-width:480px) {
+      .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%;
+      }
+    }
+  </style>
+  <style type=3D"text/css">
+    @media only screen and (max-width:480px) {
+      table.mj-full-width-mobile {
+        width: 100% !important;
+      }
+
+      td.mj-full-width-mobile {
+        width: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body style=3D"background-color:#f8f8f8;">
+  <div style=3D"background-color:#f8f8f8;">
+    <!--[if mso | IE]>
+   =20
+        <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0"><tr><td height=3D"24" style=3D"vertical-align:top;height:24px;">
+     =20
+    <![endif]-->
+    <div style=3D"height:24px;"> &nbsp; </div>
+    <!--[if mso | IE]>
+   =20
+        </td></tr></table>
+     =20
+   =20
+      <table
+         align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"" style=3D"width:600px;" width=3D"600"
+      >
+        <tr>
+          <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:e=
+xactly;">
+      <![endif]-->
+    <div style=3D"margin:0px auto;max-width:600px;padding: 0 8px;">
+      <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" style=3D"width:100%;">
+        <tbody>
+          <tr>
+            <td style=3D"border:1px solid #E5E5E5;border-top:none;direction=
+:ltr;font-size:0px;padding:0;text-align:center;">
+               <div style=3D"font-family:'Suisse Intl', 'Helvetica Neue', A=
+rial, sans-serif;font-size:0px;font-weight:normal;line-height:0px;text-alig=
+n:left;color:#000000;padding:0 0 0 0">Your response is now in the books.</d=
+iv>
+              <!--[if mso | IE]>
+                  <table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0">
+                <![endif]-->
+              <!-- Logo Header -->
+              <!--[if mso | IE]>
+            <tr>
+              <td
+                 class=3D"" width=3D"600px"
+              >
+         =20
+      <table
+         align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"" style=3D"width:598px;" width=3D"598"
+      >
+        <tr>
+          <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:e=
+xactly;">
+      <![endif]-->
+              <div style=3D"background:#ffffff;background-color:#ffffff;mar=
+gin:0px auto;max-width:598px;">
+                <table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" style=3D"background:#ffffff;background-=
+color:#ffffff;width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style=3D"border-top:8px solid #33B6FF;direction:l=
+tr;font-size:0px;padding:32px 0 0 0;text-align:center;">
+                        <!--[if mso | IE]>
+                  <table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0">
+               =20
+        <tr>
+     =20
+            <td
+               class=3D"" style=3D"vertical-align:top;width:598px;"
+            >
+          <![endif]-->
+                        <div class=3D"mj-column-per-100 mj-outlook-group-fi=
+x" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-bloc=
+k;vertical-align:top;width:100%;">
+                          <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+                            <tr>
+                              <td align=3D"center" style=3D"font-size:0px;p=
+adding:0 32px 32px 32px;word-break:break-word;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation" style=3D"border-collapse:collapse;border=
+-spacing:0px;">
+                                  <tbody>
+                                    <tr>
+                                      <td style=3D"width:133px;">
+                                        <a href=3D"https://url1812.doodle.c=
+om/ls/click?upn=3DAeiPaA0SmefWmHE8c70u1qyb9JNgpeEc5cX6u9H2-2FO8-3DNRtb_fA69=
+T5a-2FNBuVRz1QYkqdlpNVZ50H2Km527qPTNwowDQki7E655-2Fu2i-2B6LU7a8BinflHrDiWzE=
+o8bKwfJzz-2Fj-2Fj7DMRnI17SRgybcTVDFluSDxGdgf5k2Q5dA7eTWp2YDItTdHxkxnntOCw0N=
+9rIaGXyPYj2glkjWPVgw-2BImcaIWBHyJY5zFkElsDA1lUbwYo4dWdz45smyctPL6M3QZXuo55B=
+QEoNRi6ghaPqxXVUT2hze0hFNS0O-2FWvHcte8zN7WCFtHeCzTqe9qIkxYVdvH4PTR33UsgbtuR=
+W8dVmSX3wNmo6VxndeMjbmQO5A5rhHtV0p9bYmACbkVaW-2BAucGlzFDKCjkxQtfpy6BO-2Fzfv=
+Roiy8PrJ8DLulWoDuue6O7prHbFDIGn0gPv6lrhQuHrA35wysMpicwvGBB66VJZviQ-3D">
+                                                <img height=3D"auto" src=3D=
+"https://marketing-cdn.doodle.com/branding/2022/logo/doodle-logo@2x.png" st=
+yle=3D"border:0;display:block;outline:none;text-decoration:none;height:auto=
+;width:100%;font-size:13px;" width=3D"133">
+                                            </a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]>
+            </td>
+         =20
+        </tr>
+     =20
+                  </table>
+                <![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+     =20
+              </td>
+            </tr>
+          <![endif]-->
+              <!-- Headline -->
+              <!--[if mso | IE]>
+            <tr>
+              <td
+                 class=3D"" width=3D"600px"
+              >
+         =20
+      <table
+         align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"" style=3D"width:598px;" width=3D"598"
+      >
+        <tr>
+          <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:e=
+xactly;">
+      <![endif]-->
+              <div style=3D"background:#ffffff;background-color:#ffffff;mar=
+gin:0px auto;max-width:598px;">
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" style=3D"background:#ffffff;background-co=
+lor:#ffffff;width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style=3D"direction:ltr;font-size:0px;padding:0;te=
+xt-align:center;">
+                        <!--[if mso | IE]>
+                  <table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0">
+               =20
+        <tr>
+     =20
+            <td
+               class=3D"" style=3D"vertical-align:top;width:598px;"
+            >
+          <![endif]-->
+                        <div class=3D"mj-column-per-100 mj-outlook-group-fi=
+x" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-bloc=
+k;vertical-align:top;width:100%;">
+                          <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+                            <tr>
+                              <td align=3D"left" style=3D"font-size:0px;pad=
+ding:0px 32px;word-break:break-word;">
+                               <div style=3D"font-family:'Suisse Intl', 'He=
+lvetica Neue', Arial, sans-serif;font-size:28px;font-weight:600;line-height=
+:42px;text-align:center;color:#000000;padding:10px 0 24px 0;letter-spacing:=
+ 0.3px;">Response submitted!</div>
+                                    <div style=3D"font-family:'Suisse Intl'=
+, 'Helvetica Neue', Arial, sans-serif;font-size:16px;font-weight:normal;lin=
+e-height:24px;text-align:left;color:#000000;padding: 0 0 0 0;letter-spacing=
+: 0.3px;">Hi Shunliang Zhang,</div>
+                                    <div style=3D"font-family:'Suisse Intl'=
+, 'Helvetica Neue', Arial, sans-serif;font-size:16px;font-weight:normal;lin=
+e-height:24px;text-align:left;color:#000000;padding:16px 0 0 0;letter-spaci=
+ng: 0.3px;">We submitted your response to the invite for <b>Tracker Alignme=
+nt &amp; Emulsion-IFT matching</b>.</div>
+                                    <div style=3D"font-family:'Suisse Intl'=
+, 'Helvetica Neue', Arial, sans-serif;font-size:16px;font-weight:normal;lin=
+e-height:24px;text-align:left;color:#000000;padding:16px 0 0 0;letter-spaci=
+ng: 0.3px;">As long as the event isn't booked, you can edit your response a=
+nd change your chosen times.</div>
+                             =20
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]>
+            </td>
+         =20
+        </tr>
+     =20
+                  </table>
+                <![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+     =20
+              </td>
+            </tr>
+          <![endif]-->
+             =20
+              <!-- Button -->
+              <!--[if mso | IE]>
+            <tr>
+              <td
+                 class=3D"" width=3D"600px"
+              >
+         =20
+      <table
+         align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"" style=3D"width:598px;" width=3D"598"
+      >
+        <tr>
+          <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:e=
+xactly;">
+      <![endif]-->
+              <div style=3D"background:#ffffff;background-color:#ffffff;mar=
+gin:0px auto;max-width:598px;">
+                <table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" style=3D"background:#ffffff;background-=
+color:#ffffff;width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style=3D"direction:ltr;font-size:0px;padding:0;te=
+xt-align:center;">
+                        <!--[if mso | IE]>
+                  <table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0">
+               =20
+        <tr>
+     =20
+            <td
+               class=3D"" style=3D"vertical-align:top;width:598px;"
+            >
+          <![endif]-->
+                        <div class=3D"mj-column-per-100 mj-outlook-group-fi=
+x" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-bloc=
+k;vertical-align:top;width:100%;">
+                          <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+                            <tr>
+                              <td align=3D"center" vertical-align=3D"middle=
+" style=3D"font-size:0px;padding:32px 32px;word-break:break-word;">
+                                <table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation" style=3D"border-collapse:separate;line-h=
+eight:100%;">
+                                  <tr>
+                                    <td align=3D"center" bgcolor=3D"#0A5C48=
+" role=3D"presentation" style=3D"border:none;border-radius:100px;cursor:aut=
+o;mso-padding-alt:10px 25px;background:#0A5C48;" valign=3D"middle">
+                                      <a href=3D"https://url1812.doodle.com=
+/ls/click?upn=3DAeiPaA0SmefWmHE8c70u1nry0YUYJl4TTmYtu7h0-2BLDBcnwx13d8C-2Bq=
+9K8-2B5I7f5putOOr34-2Bvy6dXLOUvjk1SLz-2Bhq5zdFI4MCvV-2Bc6kC7J6c8lwEhscgou1T=
+TN6z61XhPiKM6Z0RM0m0WfW30twRs4x5nqryz1qoPHi-2FNMDBd0rwZT5GKbsiqpf2VmPgGyfj1=
+a_fA69T5a-2FNBuVRz1QYkqdlpNVZ50H2Km527qPTNwowDQki7E655-2Fu2i-2B6LU7a8BinflH=
+rDiWzEo8bKwfJzz-2Fj-2Fj7DMRnI17SRgybcTVDFluSDxGdgf5k2Q5dA7eTWp2YDItTdHxkxnn=
+tOCw0N9rIaGXyPYj2glkjWPVgw-2BImcaIWBHyJY5zFkElsDA1lUbwYo4dWdz45smyctPL6M3QZ=
+Xuo55BQEoNRi6ghaPqxXVUT2hze0hFNS0O-2FWvHcte8zN7WCFtHeCzTqe9qIkxYVdvH2iy2NVd=
+B-2FDdQ-2B4Zong2YY6uYlA60QU7e3TjnCMKpoQDv0gecA0KALDD1Y-2FY1kQBqPp7hrp8s4JFg=
+VyOKk-2BTxcXVWrjK84G8PVuTeakKFuyFeLSUe9tebR2KQh3ZkSaG4bOzNdydVJfvtO1ggj8yid=
+o-3D" style=3D"display:inline-block;background:#0A5C48;color:white;font-fam=
+ily:'Suisse Intl', 'Helvetica Neue', Arial, sans-serif;font-size:16px;font-=
+weight:400;line-height:16px;margin:0;text-decoration:none;text-transform:no=
+ne;padding:16px 24px;mso-padding-alt:0px;border-radius:100px;letter-spacing=
+: 0.3px;" target=3D"_blank">Review response</a>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]>
+            </td>
+         =20
+        </tr>
+     =20
+                  </table>
+                <![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+     =20
+              </td>
+            </tr>
+          <![endif]-->
+
+              <!-- Headline -->
+              <!--[if mso | IE]>
+            <tr>
+              <td
+                 class=3D"" width=3D"600px"
+              >
+         =20
+      <table
+         align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"" style=3D"width:598px;" width=3D"598"
+      >
+        <tr>
+          <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:e=
+xactly;">
+      <![endif]-->
+      <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+     =20
+              </td>
+            </tr>
+          <![endif]-->
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+  </div>
+<img src=3D"https://url1812.doodle.com/wf/open?upn=3DpLAr521Q0LjpwiVWSYSoZg=
+BU9-2BSJx3BP0YqnQxqyvYveXcf7ad-2FVWs0qVwpgMazwFuul6yZvre0JTAGGaF-2B-2FRkF3M=
+4h32QcLZsuQhQBxCKnmSjt2dKeEabSNy16cjBcbkhYqv-2FEpEjwTDcKAzij03srHTvhE15BkHJ=
+zZXTW4IIpJR0fPVXXsDA9gE-2BmHgsY5oh1XpkPnBSGWUHKNoJZ2zw3-2BYU26clcg24qLqGduR=
+GmDNyMmMkUcAe8vNE5RhfJ16SW4iuVJLlc-2BZZiWZS-2B6n3v4Zxo4JSORMBRFgsLSaq9gJ7eT=
+MJeuOT7fsyIv9do0qQjFAhagHxhYEFm4fypC2nkpzvNp8U2Px1JLubT8ZmCrJ8Pi0muNwnsUn6J=
+3NL4PZL9p2IzY1dkzlx250DpnsIL-2FPD5RO5cu1m-2FbuIRwpek-3D" alt=3D"" width=3D"=
+1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !impo=
+rtant;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !im=
+portant;margin-right:0 !important;margin-left:0 !important;padding-top:0 !i=
+mportant;padding-bottom:0 !important;padding-right:0 !important;padding-lef=
+t:0 !important;"></body>
+
+</html>=
+
+--5ec719d451b41deaf6f06c0fb4cd547ab94ebdf656702b10beaa06c53f84--

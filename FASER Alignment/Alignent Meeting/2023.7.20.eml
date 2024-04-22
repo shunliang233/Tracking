@@ -1,0 +1,168 @@
+Received: from ZRAP278MB0159.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:29::9) by
+ ZR2P278MB1132.CHEP278.PROD.OUTLOOK.COM with HTTPS; Thu, 20 Jul 2023 15:03:38
+ +0000
+Received: from ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:12::15)
+ by ZRAP278MB0159.CHEP278.PROD.OUTLOOK.COM (2603:10a6:910:29::9) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6631.12; Thu, 20 Jul
+ 2023 15:03:37 +0000
+Received: from ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM
+ ([fe80::2f1:39e7:70e2:dc78]) by ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM
+ ([fe80::2f1:39e7:70e2:dc78%4]) with mapi id 15.20.6609.024; Thu, 20 Jul 2023
+ 15:03:37 +0000
+From: Tomohiro Inada <tomohiro.inada@cern.ch>
+To: "FASER-tracker (Discussion of the FASER tracking detector)"
+	<FASER-tracker@cern.ch>, "FASER-neutrino (FASER neutrino group)"
+	<FASER-neutrino@cern.ch>
+CC: Ke Li <ke.li@cern.ch>
+Subject: Fwd: Informal meeting for tracker alignment and emulstion-IFT
+ matching (July 21, 3pm)
+Thread-Topic: Informal meeting for tracker alignment and emulstion-IFT
+ matching (July 21, 3pm)
+Thread-Index: Adm7EAcO7otfRgykTG6t4iIF4HpdnA==
+Date: Thu, 20 Jul 2023 15:03:37 +0000
+Message-ID: <99BA954F-B170-4C6C-957E-1B924F584EE8@cern.ch>
+References:
+	<GVAP278MB03120A4182911633572F7647E03EA@GVAP278MB0312.CHEP278.PROD.OUTLOOK.COM>
+Accept-Language: ja-JP, en-US
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-MS-Exchange-Organization-Network-Message-Id:
+	c7107a6a-02db-4546-f30c-08db89327edd
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=cern.ch;
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: c7107a6a-02db-4546-f30c-08db89327edd
+x-ms-traffictypediagnostic:
+	ZRAP278MB0096:EE_|ZRAP278MB0159:EE_|ZR2P278MB1132:EE_
+x-microsoft-antispam: BCL:0;
+x-forefront-antispam-report:
+	CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:;DIR:INT;
+x-ms-exchange-crosstenant-originalarrivaltime: 20 Jul 2023 15:03:37.2896 (UTC)
+x-ms-exchange-crosstenant-network-message-id:
+	c7107a6a-02db-4546-f30c-08db89327edd
+x-ms-exchange-crosstenant-id: c80d3499-4a40-4a8c-986e-abce017d6b19
+x-ms-exchange-crosstenant-authsource: ZRAP278MB0096.CHEP278.PROD.OUTLOOK.COM
+x-ms-exchange-crosstenant-authas: Internal
+x-ms-exchange-crosstenant-fromentityheader: Hosted
+x-ms-exchange-transport-crosstenantheadersstamped: ZRAP278MB0159
+x-ld-processed: c80d3499-4a40-4a8c-986e-abce017d6b19,ExtAddr,ExtFwd
+x-ms-exchange-atpmessageproperties: SA|SL
+x-ms-exchange-crosstenant-mailboxtype: HOSTED
+x-ms-exchange-crosstenant-userprincipalname:
+	kB4o2jWjI4hJh8v+rJOt0WvwxxglSxnoBk6EO9unf8/u1RzRE7F+DwWFIue8MzKCMQrIcPc0x6fuunOIZSUzeg==
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	28uUtyTCgmuaRsEgaZ8BxhgeUZcd6cb0gzYt04+nw9+tR+UVFT2XLXLX170HMvdgTLY3dmm0zAp3g1P5yQizra1i0QxjmTIRibXdsOYsGbP7Z3oPqvSn9hV2JJpS8PFS1ZI9t2/Uw4k4mJFm3ZGqiYzJfvbhK2WpQqyoS2u9c3iGKJNWVMWt0bXeMSacAhOTjpcYz/6qvhJN5VEgsGf6l9FbNcnd3qLb4+SpgAcF85cBe3YuDbKgz+/relOZNyF32L6Bwldt7ra7DC1l6VVyZQ/skSVaX4vWhE4AJX+oNp+LaWuVWmWTI8SGOsdQxvjpXbhC0jrF/dmF0DgF/33DbueiC4UoCBYOc/bMeivh71VhZ20h1RHbadpw+fEPhoNq6P+d85Gx+IUTDrI+HfuflKGhzdzk9BuPYlJ6BTkupThvuXlICutd6KU3zvs/m4cY+bu3DJYfXsHtjnYeWWw2CsxlFHVYUZS44cYmXYln21L6kNqBTjx21Jf0xYZLxAbVegILsLRPqJBDHCC+ADukUipktdatsYpRSOCHAPLyuTc41NKS3hnCR8eZuJ9gJ/h4rLQQ2+xiLpfd25EzWZXOCOdOEzdgaBrpn2+ymPZngXSWqm4Inwohc/fpLYo/yuA4U4qmLiT1K3+9TylobFYt7TE+vzumAVBQwn0M2EC0Kc2unZw2huqq8o9co8GExZ9OemDX7dhud/wYte/vN7Ep9EOP1WI8PToEfdMDVL+0mz5Y25GgCsZFGjRdyZD1avZC
+Content-Type: multipart/alternative;
+	boundary="_000_99BA954FB1704C6C957E1B924F584EE8cernch_"
+MIME-Version: 1.0
+
+--_000_99BA954FB1704C6C957E1B924F584EE8cernch_
+Content-Type: text/plain; charset="us-ascii"
+
+Dear tracker and FASERnu people,
+
+For those who are interested in the tracker alignment we will have the regular informal meeting for alignment and Emulsion-IFT matching at 3pm tomorrow.
+
+Best regards,
+Ke & Tomo
+
+
+Begin forwarded message:
+
+From: Ke Li <ke.li@cern.ch<mailto:ke.li@cern.ch>>
+Subject: Informal meeting for tracker alignment and emulstion-IFT matching (July 21, 3pm)
+Date: July 20, 2023 15:43:48 GMT+2
+To: "FASER-offline (Discussion of the FASER offline software)" <FASER-offline@cern.ch<mailto:FASER-offline@cern.ch>>
+Cc: Tomohiro Inada <tomohiro.inada@cern.ch<mailto:tomohiro.inada@cern.ch>>
+
+Hi all,
+
+We will have our informal meeting for alignment and emulsion-ift matching at tomorrow, 3pm, here is the agenda:https://indico.cern.ch/event/1309726/
+For people at CERN, the room at 42/R-016 is booked. We can discuss the status and progress for each task.
+
+Best,
+Tomo & Ke
+
+
+--_000_99BA954FB1704C6C957E1B924F584EE8cernch_
+Content-Type: text/html; charset="us-ascii"
+Content-ID: <6340C09C2EDBAD458966891D145D319E@CHEP278.PROD.OUTLOOK.COM>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+</head>
+<body style="word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class="">
+Dear tracker and FASERnu people,
+<div class=""><br class="">
+</div>
+<div class=""><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: HelveticaNeue;" class="">For those who are interested in the tracker alignment we will have the regular informal meeting for alignment and Emulsion-IFT matching at 3pm tomorrow.</span></div>
+<div class=""><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: HelveticaNeue;" class=""><br class="">
+</span></div>
+<div class="">Best regards,</div>
+<div class="">Ke &amp; Tomo<br class="">
+<div class=""><br class="">
+</div>
+<div class="">
+<div><br class="">
+<blockquote type="cite" class="">
+<div class="">Begin forwarded message:</div>
+<br class="Apple-interchange-newline">
+<div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;" class="">
+<span style="font-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif; color:rgba(0, 0, 0, 1.0);" class=""><b class="">From:
+</b></span><span style="font-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif;" class="">Ke Li &lt;<a href="mailto:ke.li@cern.ch" class="">ke.li@cern.ch</a>&gt;<br class="">
+</span></div>
+<div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;" class="">
+<span style="font-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif; color:rgba(0, 0, 0, 1.0);" class=""><b class="">Subject:
+</b></span><span style="font-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif;" class=""><b class="">Informal meeting for tracker alignment and emulstion-IFT matching (July 21, 3pm)</b><br class="">
+</span></div>
+<div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;" class="">
+<span style="font-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif; color:rgba(0, 0, 0, 1.0);" class=""><b class="">Date:
+</b></span><span style="font-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif;" class="">July 20, 2023 15:43:48 GMT+2<br class="">
+</span></div>
+<div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;" class="">
+<span style="font-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif; color:rgba(0, 0, 0, 1.0);" class=""><b class="">To:
+</b></span><span style="font-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif;" class="">&quot;FASER-offline (Discussion of the FASER offline software)&quot; &lt;<a href="mailto:FASER-offline@cern.ch" class="">FASER-offline@cern.ch</a>&gt;<br class="">
+</span></div>
+<div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;" class="">
+<span style="font-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif; color:rgba(0, 0, 0, 1.0);" class=""><b class="">Cc:
+</b></span><span style="font-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif;" class="">Tomohiro Inada &lt;<a href="mailto:tomohiro.inada@cern.ch" class="">tomohiro.inada@cern.ch</a>&gt;<br class="">
+</span></div>
+<br class="">
+<div class="">
+<div class="WordSection1" style="page: WordSection1; caret-color: rgb(0, 0, 0); font-family: HelveticaNeue; font-size: 12px; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none;">
+<div style="margin: 0in; text-align: justify; font-size: 11pt; font-family: DengXian;" class="">
+Hi all,<o:p class=""></o:p></div>
+<div style="margin: 0in; text-align: justify; font-size: 11pt; font-family: DengXian;" class="">
+<o:p class="">&nbsp;</o:p></div>
+<div style="margin: 0in; text-align: justify; font-size: 11pt; font-family: DengXian;" class="">
+We will have our informal meeting for alignment and emulsion-ift matching at tomorrow, 3pm, here is the agenda:<a href="https://indico.cern.ch/event/1309726/" style="color: rgb(5, 99, 193); text-decoration: underline;" class="">https://indico.cern.ch/event/1309726/</a><o:p class=""></o:p></div>
+<div style="margin: 0in; text-align: justify; font-size: 11pt; font-family: DengXian;" class="">
+For people at CERN, the room at 42/R-016 is booked. We can discuss the status and progress for each task.<o:p class=""></o:p></div>
+<div style="margin: 0in; text-align: justify; font-size: 11pt; font-family: DengXian;" class="">
+<o:p class="">&nbsp;</o:p></div>
+<div style="margin: 0in; text-align: justify; font-size: 11pt; font-family: DengXian;" class="">
+Best,<o:p class=""></o:p></div>
+<div style="margin: 0in; text-align: justify; font-size: 11pt; font-family: DengXian;" class="">
+Tomo &amp; Ke</div>
+</div>
+</div>
+</blockquote>
+</div>
+<br class="">
+</div>
+</div>
+</body>
+</html>
+
+--_000_99BA954FB1704C6C957E1B924F584EE8cernch_--
