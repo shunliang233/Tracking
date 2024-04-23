@@ -1,0 +1,136 @@
+From: Shunliang Zhang <shunliang.zhang@cern.ch>
+Content-Type: multipart/signed;
+	boundary="Apple-Mail=_5CE38D70-A093-428D-B866-0BCDC9A200BC";
+	protocol="application/pkcs7-signature";
+	micalg=sha-256
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3731.400.51.1.1\))
+Subject: Request for ATLAS Twiki Access
+X-Universally-Unique-Identifier: FC4D6D8C-FCBF-4E70-AE2B-0488AEA37AFE
+Message-Id: <6B9C8C62-94F4-44B5-A443-8B1967E6BA13@cern.ch>
+Date: Tue, 31 Oct 2023 16:10:02 +0800
+To: atlas-twiki-support@cern.ch
+
+
+--Apple-Mail=_5CE38D70-A093-428D-B866-0BCDC9A200BC
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_CC232E9C-071F-4EB6-9D72-870ADA9C191F"
+
+
+--Apple-Mail=_CC232E9C-071F-4EB6-9D72-870ADA9C191F
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Dear ATLAS Twiki manager,
+
+I=E2=80=99m Shunliang Zhang working for FASER experiment. We are using =
+ATLAS User Interface (e.g. Athena) to do our work at FASER, so I need to =
+learn the knowledge of how to use it.
+
+However I=E2=80=99m not a member in ATLAS group, so I can=E2=80=99t =
+visit some webpages describing the ATLAS tools, especially the Twiki =
+pages. For instance:
+https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/AtlasSetup
+
+May I ask for the access to the related Twiki pages in order for the =
+smooth work in FASER?
+
+Best Regards,
+Shunliang Zhang=
+
+--Apple-Mail=_CC232E9C-071F-4EB6-9D72-870ADA9C191F
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; =
+charset=3Dutf-8"></head><body style=3D"overflow-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: after-white-space;"><span =
+style=3D"font-size: 14px;">Dear ATLAS Twiki manager,</span><div><span =
+style=3D"font-size: 14px;"><br></span></div><div><span style=3D"font-size:=
+ 14px;">I=E2=80=99m Shunliang Zhang working for FASER experiment. We are =
+using ATLAS User Interface (e.g. Athena) to do our work at FASER, so I =
+need to learn the knowledge of how to use it.</span></div><div><span =
+style=3D"font-size: 14px;"><br></span></div><div><span style=3D"font-size:=
+ 14px;">However I=E2=80=99m not a member in ATLAS group, so I can=E2=80=99=
+t visit some webpages describing the ATLAS tools, especially the Twiki =
+pages. For instance:</span></div><div><div style=3D"display: =
+block;"><span style=3D"font-size: 14px;"><a =
+href=3D"https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/AtlasSetup=
+">https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/AtlasSetup</a><b=
+r></span></div></div><div style=3D"display: block;"><span =
+style=3D"font-size: 14px;"><br></span></div><div style=3D"display: =
+block;"><span style=3D"font-size: 14px;">May I ask for the access to the =
+related Twiki pages in order for the smooth work in =
+FASER?</span></div><div style=3D"display: block;"><span =
+style=3D"font-size: 14px;"><br></span></div><div style=3D"display: =
+block;"><span style=3D"font-size: 14px;">Best Regards,</span></div><div =
+style=3D"display: block;"><span style=3D"font-size: 14px;">Shunliang =
+Zhang</span></div></body></html>=
+
+--Apple-Mail=_CC232E9C-071F-4EB6-9D72-870ADA9C191F--
+
+--Apple-Mail=_5CE38D70-A093-428D-B866-0BCDC9A200BC
+Content-Disposition: attachment;
+	filename=smime.p7s
+Content-Type: application/pkcs7-signature;
+	name=smime.p7s
+Content-Transfer-Encoding: base64
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExDzANBglghkgBZQMEAgEFADCABgkqhkiG9w0BBwEAAKCCCSQw
+ggkgMIIHCKADAgECAhNuAFzjfN9yAQ24ZSNEAAEAXON8MA0GCSqGSIb3DQEBDQUAMFYxEjAQBgoJ
+kiaJk/IsZAEZFgJjaDEUMBIGCgmSJomT8ixkARkWBGNlcm4xKjAoBgNVBAMTIUNFUk4gR3JpZCBD
+ZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0yMzA3MjMwODU5MDVaFw0yNDA4MjYwODU5MDVaMIGQ
+MRIwEAYKCZImiZPyLGQBGRYCY2gxFDASBgoJkiaJk/IsZAEZFgRjZXJuMRYwFAYDVQQLEw1Pcmdh
+bmljIFVuaXRzMQ4wDAYDVQQLEwVVc2VyczERMA8GA1UEAxMIc2h1bmxpYW4xDzANBgNVBAMTBjg1
+NDExMzEYMBYGA1UEAxMPU2h1bmxpYW5nIFpoYW5nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEArIzz2giscMDbMVxZ/DSLvDznxbBUM/5+NpeGGdXZoQJl3wjNItqXu5ynUYFJIJOJ2i/g
+gRUk3mx/19faQ23egEaAkqHtlkQlHpwu46m5x8U+Iwy0Lvv2CwJfjaPy0o3Liq0TXgOI3bz/9lQe
+WSR+lmPGXgglz6TYLfHyoP/jgb5PEtZp7jYGLHevBu+PAFApoLLzH2FJHDoUfUAblZD6tX+gNY9v
+rvH5PZRyjYBp5MlaDlHv242votz0Ya21H5LCf5HdwlvNPA0udnXkmhVtczctA0A/05qtmgQzOs56
+8w1/d0SaXBhjKE+O4b7i5kRUQK24vytGPJg7SXuAqDln+wIDAQABo4IEqjCCBKYwHQYDVR0OBBYE
+FHWX/CCAMvcwatIlJiWPBKQlgAT6MB8GA1UdIwQYMBaAFKWg/WZY/bndeuGynZ+j0eVQGJTnMIIB
+OAYDVR0fBIIBLzCCASswggEnoIIBI6CCAR+GTmh0dHA6Ly9jYWZpbGVzLmNlcm4uY2gvY2FmaWxl
+cy9jcmwvQ0VSTiUyMEdyaWQlMjBDZXJ0aWZpY2F0aW9uJTIwQXV0aG9yaXR5LmNybIaBzGxkYXA6
+Ly8vQ049Q0VSTiUyMEdyaWQlMjBDZXJ0aWZpY2F0aW9uJTIwQXV0aG9yaXR5LENOPUNFUk5QS0kw
+NSxDTj1DRFAsQ049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmln
+dXJhdGlvbixEQz1jZXJuLERDPWNoP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFzZT9vYmpl
+Y3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCCAWUGCCsGAQUFBwEBBIIBVzCCAVMwZgYIKwYB
+BQUHMAKGWmh0dHA6Ly9jYWZpbGVzLmNlcm4uY2gvY2FmaWxlcy9jZXJ0aWZpY2F0ZXMvQ0VSTiUy
+MEdyaWQlMjBDZXJ0aWZpY2F0aW9uJTIwQXV0aG9yaXR5KDEpLmNydDCBwgYIKwYBBQUHMAKGgbVs
+ZGFwOi8vL0NOPUNFUk4lMjBHcmlkJTIwQ2VydGlmaWNhdGlvbiUyMEF1dGhvcml0eSxDTj1BSUEs
+Q049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmlndXJhdGlvbixE
+Qz1jZXJuLERDPWNoP2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9u
+QXV0aG9yaXR5MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5jZXJuLmNoL29jc3AwDgYDVR0PAQH/
+BAQDAgWgMD0GCSsGAQQBgjcVBwQwMC4GJisGAQQBgjcVCIO90AmC7Y0Nhu2LK4He9TeFgNBiHoWK
+40yBtaoEAgFkAgEQMCkGA1UdJQQiMCAGCisGAQQBgjcKAwQGCCsGAQUFBwMEBggrBgEFBQcDAjA1
+BgkrBgEEAYI3FQoEKDAmMAwGCisGAQQBgjcKAwQwCgYIKwYBBQUHAwQwCgYIKwYBBQUHAwIwSwYD
+VR0RBEQwQqAnBgorBgEEAYI3FAIDoBkMF3NodW5saWFuZy56aGFuZ0BjZXJuLmNogRdzaHVubGlh
+bmcuemhhbmdAY2Vybi5jaDBSBgkrBgEEAYI3GQIERTBDoEEGCisGAQQBgjcZAgGgMwQxUy0xLTUt
+MjEtMTUyNjIyNDg3NC0xNTQwNjg4NjU4LTEzNjE0NjI5ODAtODY1MDM1NDBEBgkqhkiG9w0BCQ8E
+NzA1MA4GCCqGSIb3DQMCAgIAgDAOBggqhkiG9w0DBAICAIAwBwYFKw4DAgcwCgYIKoZIhvcNAwcw
+JwYDVR0gBCAwHjAOBgwrBgEEAWAKBAICAwEwDAYKKoZIhvdMBQICATANBgkqhkiG9w0BAQ0FAAOC
+AgEAFUnmzQWc2aovL68e3CSvLSjEffAN7ce7TIQt/c+MIoxadLOOfv7bVSEJLSALtajzZ/ID0Ojq
+GCrrU+7Od2/J/FJyo8b2K6yRgJzzbS9lthbn1T1JYEHBmNkk2jrhfyHC9IdTTEz20X60fy4iwqEF
+hOj6w+dghL3lU8p2XP+6LR4dmrQPubljVbbEvyPhVw/n4VIvk/nVH2kOC624OSAbtKkmjFWZx4Cd
+Ac2sxmWhMdIsHoWgH6+mJ3ozxb0i5di96O+94lSYxIAAC7O+ol9QTbk7eClgv5inrjYw18uX+cQn
+xw1FsCiyz+YHCgbteL3kfrpKt+ZufhmsAJ29q96PouHrHRt8bPH89eeJbryUoYzRAfkGjS/FIPyI
+AYEcZprsPe8y5nlTr7CZz6ctnuUcX6EFlo8XomI94OzgyOSXNQ89oAPEKlS9qV9cja08HQMCM6fV
+2rmR+wd4tR/v/ozi0u24FGAciSv2NiF6JxKQFKgZpBiUJf/sCcqmmWGyaGYkAUgDu2rA4wbWRPjs
+dOQd8i7JGPU2+EB+3PDa87wstShUz121PRyavncrP+ljXdAAVyRP/UFno0opfDJ8LZzRT6CsifKo
+IFWqy61Qbw9h+unyNlDiutvRW2ZOGknJ9kbdAyOL1qg9ZSDjBeWaBCEE2paJeUlUt8O2MGiJRr2S
+Y0ExggMDMIIC/wIBATBtMFYxEjAQBgoJkiaJk/IsZAEZFgJjaDEUMBIGCgmSJomT8ixkARkWBGNl
+cm4xKjAoBgNVBAMTIUNFUk4gR3JpZCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eQITbgBc43zfcgEN
+uGUjRAABAFzjfDANBglghkgBZQMEAgEFAKCCAWcwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAc
+BgkqhkiG9w0BCQUxDxcNMjMxMDMxMDgxMDAyWjAvBgkqhkiG9w0BCQQxIgQgKXNTKA4GFmlNDEI+
+gSZA+RQ+XRdDNGW691dHGo63aAUwfAYJKwYBBAGCNxAEMW8wbTBWMRIwEAYKCZImiZPyLGQBGRYC
+Y2gxFDASBgoJkiaJk/IsZAEZFgRjZXJuMSowKAYDVQQDEyFDRVJOIEdyaWQgQ2VydGlmaWNhdGlv
+biBBdXRob3JpdHkCE24AXON833IBDbhlI0QAAQBc43wwfgYLKoZIhvcNAQkQAgsxb6BtMFYxEjAQ
+BgoJkiaJk/IsZAEZFgJjaDEUMBIGCgmSJomT8ixkARkWBGNlcm4xKjAoBgNVBAMTIUNFUk4gR3Jp
+ZCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eQITbgBc43zfcgENuGUjRAABAFzjfDANBgkqhkiG9w0B
+AQsFAASCAQBZVdIxdpual1XsjCB6RFM/He/4zyzxkcPO/QPYtK/n6cS541f3kmJd8JbKtsXTkXBh
++03JyOt77S+9P7HVnz98jfN/taSqMEJeL45dbTI3qDKv0PjeweYhXOcBpZzS2E9OuIy+QWVrqHlB
+EFU6EaE17K9vNE8BqzMbRZuMhoj842PPubCjI67CxpGKzu+HUsACmwVGvVY24esAG6we6E8XdC/a
+x3/xCnWSP2K9DbAmuS7BCVNGKboV5rhMHRLMjHT3iY2/srK/5x5U5IqTtJ0Hfwau4k0jUNqbpNWk
+i5YDoqvg1XzqDDMDxKviRCcA9qleMlQFgx/eI3kL+mWzRxmCAAAAAAAA
+--Apple-Mail=_5CE38D70-A093-428D-B866-0BCDC9A200BC--

@@ -1,0 +1,65 @@
+\chapter{Introduction}
+\section{ATLAS Software Documentation}
+\begin{itemize}
+	\item FASER 的工作环境基本上是从 ATLAS 的环境修改来的，因此需要先了解 ATLAS 的工作环境。
+	\item ATLAS Software Documentation 是关于 ATLAS 软件 Athena 的文档。
+	\begin{itemize}
+		\item Guides 栏目是为 Athena Developer 准备的，想要阅读 FASER 的径迹重建算法就需要查看这一栏。
+		\item Analysis SW Tutorial 栏目是为数据分析人员准备的，介绍了 ATLAS 利用 Athena 程序包进行数据分析的流程。
+		\item Other Tutorials 栏目是一些零碎的进阶项目。
+	\end{itemize}
+\end{itemize}
+
+\section{Athena Framework}
+\subsection{Project}
+对 Athena 源代码应用不同的编译配置可以得到侧重于不同功能的软件，称为不同的 Project, 其中 Athena Project 具有最全面的功能。
+
+\subsection{C++ 核心代码}
+使用 C++ 编写核心代码 (Components):
+\begin{itemize}
+	\item Algorithm: 每一个使用 Athena 处理的 job 都由 algorithm chain 完成具体工作。
+	\item Tool: 位于特定 Algorithm 中可以调用的小工具。
+	\item Service: 每个 Algorithm 都可以调用的通用小工具。
+\end{itemize}
+
+\subsection{Python 接口代码}
+使用 Python 编写接口代码，使用 component accumulator 指示整个 job 应该调用哪些 Algorithm, Tool, Service.
+
+\section{使用 Athena}
+在 \verb|/cvmfs| 上安装有现成的编译好的 Athena Project, 因此不需要自己从源代码编译，只需要 \verb|source| 一个 \verb|.sh| 文件即可使用 Athena 环境：
+
+\verb|export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+	  source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
+	  asetup Athena,main,latest
+	  python -m AthExHelloWorld.HelloWorldConfig|
+
+最后一行是运行测试模块，测试 Athena 环境是否被成功加载。
+
+
+
+
+
+\chapter{Athena Configuration}
+The configuration system of Athena allows us to assemble and customize components (algorithms, services and tools) for a workflow. It is done by creation and manipulation of python objects, and known as \verb|Component Accumulator| based configuration.
+
+\section{Configuration System 的工作原理}
+\begin{itemize}
+	\item Each C++ component defines a set of configurable parameters (*),
+	\begin{itemize}
+		\item There is rich, yet restricted set of types of configurable parameters that are supported,
+		\item Typically reasonable default values are defined as well.
+	\end{itemize}
+	\item During compilation of Athena Project, a database entry is made containing information about these properties.
+	\item During the configuration this database is queried for information about a component and as a result python class is generated with class attributes corresponding to the properties defined in C++.
+	\item Set of python script creates python objects and manipulates them (set properties). (*)
+	\item Resulting set of python objects produce a serialized/textual representation of the configuration.
+	\item The configuration is read in C++ program and populates the global dictionary with all settings.
+	\item C++ components during the initialization fetch the values and set configurable parameters (see 1st point) accordingly.
+\end{itemize}
+
+The steps marked with (*) are places where developer intervention is needed. That is to define configurable parameters and to prepare scripts setting them. Other steps are automatized. FASER 开发的 calypso 就是在 Athena 的基础上定义了自己的 C++ components (algorithms, services and tools) 和用于设置这些 C++ components 的 Python 脚本。使用 CMake 编译 calypso 实际上就是编译其中的 C++ components, 编译完后才能在 Python 脚本中使用这些 components 来处理 job.
+
+
+
+
+

@@ -1,0 +1,27 @@
+\section{ATLAS UI}
+ATLAS User Interface 即 ATLAS 工作所需的环境，被称为 ATLASLocalRootBase, 包含了 ATLAS 合作组所需的所有软件及环境配置。其中有大量外部软件，只有 Athena 是真正由 ATLAS 合作组开发的。
+
+在 lxplus 上 \verb|source /cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase/user/atlasLocalSetup.sh| 就可以直接配置好 ATLAS 所需的所有环境。建议使用下面的方法进行 source, 这样在有需要的时候只需使用 setupATLAS 命令即可设置好 ATLAS 环境：
+
+\begin{minted}[tabsize=4]{sh}
+export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+alias setupATLAS='source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh'
+\end{minted}
+
+设置好 ATLAS 环境后，就有很多科研工具可以使用，启用这些工具的基本方法是用 lsetup 程序，这是 ATLAS UI 提供的用于启用软件命令。可以使用的软件包括但不限于：
+
+\begin{itemize}
+	\item Rucio (Scientific Data Management): \url{https://rucio.cern.ch/}
+	\item Panda Client: \url{https://pypi.org/project/panda-client/}
+	\item Ganga (Distributed Analysis): \url{https://iopscience.iop.org/article/10.1088/1742-6596/219/7/072002/pdf}
+	\item Athena: \url{https://atlassoftwaredocs.web.cern.ch/athena/}
+	\item PROOF-on-Demand: \url{https://www.researchgate.net/publication/231123936_PROOF_on_Demand}
+	\item ......
+\end{itemize}
+
+\section{Athena}
+真正的 ATLAS Release 软件称为 Athena, 在设置完 ATLAS UI 后，可以使用 asetup 命令启用不同的 Athena 版本。 Athena 对大小版本进行了分级，从大到小是: releases, builds, nightlies. 一般使用者只需要 releases 大版本就可以了，后面两级小版本是给开发者用的。
+
+asetup 命令的具体用法可以看关于 AtlasSetup 的文档。
+
+

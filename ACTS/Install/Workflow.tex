@@ -1,0 +1,34 @@
+\section{安装 Acts}
+\subsection{从源码安装的 Pre-requisite}
+\begin{itemize}
+	\item \verb|A C++17 compatible compiler|: yum 基础库提供的 gcc 4.8.5 无法使用 C++17 标准，使用 SCL 库安装 devtoolset-11.
+	\item \verb|CMake >= 3.14|: 从 GitHub 最新的源代码安装 cmake 3.28.20231215-g6ba3bb0
+	\item \verb|Boost >= 1.71|: C++ 的准标准库, yum 的常用库 base, epel, scl 提供的最新版本是 1.69.0, 因此只能使用源码安装。
+	\item \verb|Eigen >= 3.3.7|: C++ 的线性代数标准库，用 \verb|yum install eigen3-devel| 可以从 epel 库中安装到 3.3.7 版。
+	\item \verb|CLHEP|: A Class Library for High Energy Physics, 用 cmake 源码安装。
+	\item \verb|Geant4|: 从源码安装 Geant4, 图形化还有问题，但命令行应该可以用了。
+	\item 安装 Acts 之前有 100 个依赖软件需要安装，每个软件都需要仔细阅读安装教程，实在是太麻烦了，遂放弃。
+\end{itemize}
+
+\subsection{利用 CVMFS 提供的环境进行安装}
+\begin{itemize}
+	\item 根据 Acts 的文档说明，在 CVMFS 的 LCG release 中拥有所有 Acts 所需的软件依赖。
+	\begin{itemize}
+		\item 因此只需要 \verb|source| LCG 中的 \verb|setup.sh|, 将系统环境改为 LCG 中环境就可以安装使用 Acts 了。
+		\item GitHub 上的 Acts 源代码甚至在目录 \verb|CI| 中提供了 \verb|source| LCG 环境的 \verb|setup_cvmfs_lcg.sh| 脚本。
+		\item 该脚本会判断当前 shell 类型和操作系统版本，然后调用相应的 LCG 环境。
+		\item 在源代码的根目录: \verb|source ./CI/setup_cvmfs_lcg.sh|, 环境就配置完成了。
+	\end{itemize}
+	\item 使用 CMake 进行安装
+	\begin{itemize}
+		\item Acts 似乎是一个没有可执行程序的 C++ 库，因此没有安装过程，使用方法是编译完成后在 C++ 程序中调用编译好的库。
+		\item 因此官方建议的安装方式是将编译目录 \verb|build| 放在源代码根目录中，在编译完成后应保留所有内容。
+		\item 进入源代码根目录，进行编译前的构建: \verb|cmake -S . -B ./build -DCMAKE_INSTALL_PREFIX=./install|
+		\item 使用 \verb|CMAKE_INSTALL_PREFIX| 选项设置安装目录，以确保如果有实际的安装内容，会安装在源代码目录下。
+		\item 进行编译: \verb|cmake --build ./build -j 32|
+		\item 进行安装前的测试: \verb|ctest|, 没有找到 test configuration file.
+		\item 尝试安装可执行程序: \verb|cmake --install ./build|
+		\item 观察发现安装的主要是 \verb|sh|, \verb|hpp|, \verb|so| 等类型的文件，确实没有二进制可执行程序。
+	\end{itemize}
+\end{itemize}
+
